@@ -1,0 +1,929 @@
+{
+  "total_samples": 25,
+  "passed_samples": 17,
+  "pass_rate": "68.0%",
+  "flagged_for_review": 8,
+  "qc_metrics": {
+    "precision": 0.625,
+    "recall": 1.0,
+    "f1_score": 0.7692
+  },
+  "details": [
+    {
+      "id": "qc_01_hi_te",
+      "source": "सुरक्षा कारणों से अपना विवरण किसी के साथ साझा न करें।",
+      "target_text": "భద్రతా కారణాల వల్ల మీ వివరాలను ఎవరితోనూ పంచుకోకండి.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "te",
+          "expected_lang": "te",
+          "confidence": 0.9999,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 31.4,
+          "chrf_score": 80.13,
+          "back_translation": "सुरक्षा कारणों से किसी के साथ भी अपना विवरण साझा न करें।",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_02_en_hi",
+      "source": "We are processing your request. Please wait a moment.",
+      "target_text": "हम आपके अनुरोध पर कार्रवाई कर रहे हैं। कृपया कुछ समय प्रतीक्षा करें।",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "hi",
+          "expected_lang": "hi",
+          "confidence": 0.9925,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 80.71,
+          "chrf_score": 84.64,
+          "back_translation": "We are processing your request. Please wait a while.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_03_en_pt",
+      "source": "Click here to download your monthly report.",
+      "target_text": "Clique aqui para baixar baixar baixar baixar baixar baixar relatório.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": false,
+          "reason": "consecutive_word_loop"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "pt",
+          "expected_lang": "pt",
+          "confidence": 0.9654,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": null,
+          "chrf_score": null
+        }
+      }
+    },
+    {
+      "id": "qc_04_en_es",
+      "source": "Welcome to our customer portal. Please sign in to continue.",
+      "target_text": "Bienvenido a nuestro portal de clientes. Inicie sesión para continuar.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "es",
+          "expected_lang": "es",
+          "confidence": 0.939,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 64.07,
+          "chrf_score": 76.09,
+          "back_translation": "Welcome to our customer portal. Log in to continue.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_05_ta_fr",
+      "source": "PassExpress வழியாக உங்கள் டிக்கெட்டைப் பெறுங்கள்.",
+      "target_text": "Obtenez votre billet via PassExpress.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "fr",
+          "expected_lang": "fr",
+          "confidence": 0.7777,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "PassExpress வழியாக உங்கள் டிக்கெட்டைப் பெறுங்கள்.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_06_en_fr",
+      "source": "Authentication failed because the OAuth2 token expired.",
+      "target_text": "L'authentification a échoué car le jeton OAuth2 a expiré.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "fr",
+          "expected_lang": "fr",
+          "confidence": 0.5006,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 72.6,
+          "chrf_score": 96.6,
+          "back_translation": "The authentication failed because the OAuth2 token expired.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_07_es_de",
+      "source": "Realice la transferencia utilizando EuroPay únicamente.",
+      "target_text": "Führen Sie die Überweisung nur mit EuroPay durch.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "de",
+          "expected_lang": "de",
+          "confidence": 0.9995,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": false,
+          "bleu_score": 15.62,
+          "chrf_score": 52.77,
+          "back_translation": "Solo realice la transferencia con EuroPay.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_08_hi_ta",
+      "source": "आपका खाता सुरक्षित है और उपयोग के लिए तैयार है।",
+      "target_text": "உங்கள் கணக்கு பாதுகாப்பாக உள்ளது மற்றும் பயன்படுத்தத் தயாராக உள்ளது.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "ta",
+          "expected_lang": "ta",
+          "confidence": 0.9995,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "आपका खाता सुरक्षित है और उपयोग के लिए तैयार है।",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_09_de_id",
+      "source": "Ihre Einstellungen wurden erfolgreich gespeichert.",
+      "target_text": "Your settings have been saved successfully.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": false,
+          "detected_lang": "en",
+          "expected_lang": "id",
+          "confidence": 0.9724,
+          "reason": "language_mismatch"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "Ihre Einstellungen wurden erfolgreich gespeichert.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_10_en_fr",
+      "source": "Please complete your user profile before submitting.",
+      "target_text": "",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": false,
+          "reason": "empty_output"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": false,
+          "detected_lang": "none",
+          "confidence": 0.0,
+          "reason": "empty_input"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": null,
+          "chrf_score": null
+        }
+      }
+    },
+    {
+      "id": "qc_11_es_fr",
+      "source": "El documento adjunto contiene todos los datos solicitados.",
+      "target_text": "Le document ci-joint contient toutes les données demandées.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "fr",
+          "expected_lang": "fr",
+          "confidence": 0.9685,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "El documento adjunto contiene todos los datos solicitados.",
+          "engine_used": "marian"
+        }
+      }
+    },
+    {
+      "id": "qc_12_hi_es",
+      "source": "सफलतापूर्वक लॉगिन करने के लिए धन्यवाद।",
+      "target_text": "Gracias por iniciar sesión con éxito éxito éxito éxito éxito.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": false,
+          "reason": "consecutive_word_loop"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "es",
+          "expected_lang": "es",
+          "confidence": 0.9855,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": null,
+          "chrf_score": null
+        }
+      }
+    },
+    {
+      "id": "qc_13_en_id",
+      "source": "Please check your email to verify your registration.",
+      "target_text": "Silakan periksa email Anda untuk memverifikasi pendaftaran Anda.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "id",
+          "expected_lang": "id",
+          "confidence": 0.8264,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "Please check your email to verify your registration.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_14_pt_en",
+      "source": "A sua conta no Bradesco está atualizada.",
+      "target_text": "Your account at Bradesco is up to date.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "en",
+          "expected_lang": "en",
+          "confidence": 0.9274,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "A sua conta no Bradesco está atualizada.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_15_en_hi",
+      "source": "Please pay using Paytm to receive cashback.",
+      "target_text": "कैशबैक प्राप्त करने के लिए कृपया Paytm का उपयोग करके भुगतान करें।",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "hi",
+          "expected_lang": "hi",
+          "confidence": 0.9886,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "Please pay using Paytm to receive cashback.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_16_en_es",
+      "source": "Save all your project files directly to UltraDrive.",
+      "target_text": "Guarde todos sus archivos de proyecto directamente en UltraDrive.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "es",
+          "expected_lang": "es",
+          "confidence": 0.9888,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "Save all your project files directly to UltraDrive.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_17_fr_es",
+      "source": "Nous avons bien reçu votre demande de remboursement.",
+      "target_text": "Hemos recibido su solicitud de reembolso.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "es",
+          "expected_lang": "es",
+          "confidence": 0.8608,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 67.53,
+          "chrf_score": 86.14,
+          "back_translation": "Nous avons reçu votre demande de remboursement.",
+          "engine_used": "marian"
+        }
+      }
+    },
+    {
+      "id": "qc_18_id_en",
+      "source": "Pesanan Anda di Tokopedia telah dikirim.",
+      "target_text": "Your order on Tokopedia has been shipped.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "en",
+          "expected_lang": "en",
+          "confidence": 0.9982,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 64.32,
+          "chrf_score": 75.35,
+          "back_translation": "Pesanmu di Tokopedia telah dikirim.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_19_es_id",
+      "source": "Gunakan FastPay para completar la transacción rápidamente.",
+      "target_text": "Gunakan FastPay untuk menyelesaikan transaksi dengan cepat.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "id",
+          "expected_lang": "id",
+          "confidence": 0.5977,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 25.85,
+          "chrf_score": 70.91,
+          "back_translation": "Utilice FastPay para completar las transacciones rápidamente.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_20_en_de",
+      "source": "Your subscription will automatically renew at the end of the year.",
+      "target_text": "Ihr Abonnement wird am Ende des Jahres automatisch verlängert.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "de",
+          "expected_lang": "de",
+          "confidence": 0.9946,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 59.23,
+          "chrf_score": 89.11,
+          "back_translation": "Your subscription will be automatically renewed at the end of the year.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_21_bn_hi",
+      "source": "আপনার সিস্টেম নির্দেশিকা সফলভাবে প্রস্তুত করা হয়েছে।",
+      "target_text": "आपकी सिस्टम निर्देशिका सफलतापूर्वक तैयार की गई है।",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "hi",
+          "expected_lang": "hi",
+          "confidence": 0.9899,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": false,
+          "bleu_score": 13.13,
+          "chrf_score": 42.24,
+          "back_translation": "আপনার সিস্টেম ডিরেক্টরি সফলভাবে তৈরি করা হয়েছে.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_22_en_ta",
+      "source": "Welcome to the IncuBrix portal.",
+      "target_text": "IncuBrix போர்ட்டலுக்கு வரவேற்கிறோம்.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "ta",
+          "expected_lang": "ta",
+          "confidence": 0.9979,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 100.0,
+          "chrf_score": 100.0,
+          "back_translation": "Welcome to the IncuBrix portal.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_23_te_en",
+      "source": "మీరు పాస్‌వర్డ్‌ను విజయవంతంగా మార్చారు.",
+      "target_text": "You have successfully changed your password.",
+      "qc": {
+        "overall_passed": true,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": true,
+          "detected_lang": "en",
+          "expected_lang": "en",
+          "confidence": 0.9694,
+          "reason": "none"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 32.47,
+          "chrf_score": 71.86,
+          "back_translation": "మీరు మీ పాస్వర్డ్ను విజయవంతంగా మార్చారు.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_24_mr_en",
+      "source": "EduPortal वर तुमचे स्वागत आहे.",
+      "target_text": "Welcome to EduPortal.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": true,
+          "reason": "none"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 1
+        },
+        "language_identification": {
+          "passed": false,
+          "detected_lang": "en",
+          "expected_lang": "en",
+          "confidence": 0.2139,
+          "reason": "low_confidence"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": 32.47,
+          "chrf_score": 62.69,
+          "back_translation": "EduPortal मध्ये आपले स्वागत आहे.",
+          "engine_used": "nllb"
+        }
+      }
+    },
+    {
+      "id": "qc_25_en_mr",
+      "source": "An unknown system error occurred during processing.",
+      "target_text": "An unknown system error occurred during processing.",
+      "qc": {
+        "overall_passed": false,
+        "anomaly_check": {
+          "passed": false,
+          "reason": "untranslated_source_copy"
+        },
+        "dnt_validation": {
+          "valid": true,
+          "missing_entities": [],
+          "status": "verified_final_output"
+        },
+        "entity_preservation": {
+          "passed": true,
+          "score": 1.0,
+          "missing_entities": [],
+          "total_entities": 0
+        },
+        "language_identification": {
+          "passed": false,
+          "detected_lang": "en",
+          "expected_lang": "mr",
+          "confidence": 0.9763,
+          "reason": "language_mismatch"
+        },
+        "back_translation": {
+          "passed": true,
+          "bleu_score": null,
+          "chrf_score": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+[
+  {
+    "id": "qc_03_en_pt",
+    "source": "Click here to download your monthly report.",
+    "target_text": "Clique aqui para baixar baixar baixar baixar baixar baixar relatório.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": false,
+        "reason": "consecutive_word_loop"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": true,
+        "detected_lang": "pt",
+        "expected_lang": "pt",
+        "confidence": 0.9654,
+        "reason": "none"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": null,
+        "chrf_score": null
+      }
+    }
+  },
+  {
+    "id": "qc_07_es_de",
+    "source": "Realice la transferencia utilizando EuroPay únicamente.",
+    "target_text": "Führen Sie die Überweisung nur mit EuroPay durch.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": true,
+        "reason": "none"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 1
+      },
+      "language_identification": {
+        "passed": true,
+        "detected_lang": "de",
+        "expected_lang": "de",
+        "confidence": 0.9995,
+        "reason": "none"
+      },
+      "back_translation": {
+        "passed": false,
+        "bleu_score": 15.62,
+        "chrf_score": 52.77,
+        "back_translation": "Solo realice la transferencia con EuroPay.",
+        "engine_used": "nllb"
+      }
+    }
+  },
+  {
+    "id": "qc_09_de_id",
+    "source": "Ihre Einstellungen wurden erfolgreich gespeichert.",
+    "target_text": "Your settings have been saved successfully.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": true,
+        "reason": "none"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": false,
+        "detected_lang": "en",
+        "expected_lang": "id",
+        "confidence": 0.9724,
+        "reason": "language_mismatch"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": 100.0,
+        "chrf_score": 100.0,
+        "back_translation": "Ihre Einstellungen wurden erfolgreich gespeichert.",
+        "engine_used": "nllb"
+      }
+    }
+  },
+  {
+    "id": "qc_10_en_fr",
+    "source": "Please complete your user profile before submitting.",
+    "target_text": "",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": false,
+        "reason": "empty_output"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": false,
+        "detected_lang": "none",
+        "confidence": 0.0,
+        "reason": "empty_input"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": null,
+        "chrf_score": null
+      }
+    }
+  },
+  {
+    "id": "qc_12_hi_es",
+    "source": "सफलतापूर्वक लॉगिन करने के लिए धन्यवाद।",
+    "target_text": "Gracias por iniciar sesión con éxito éxito éxito éxito éxito.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": false,
+        "reason": "consecutive_word_loop"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": true,
+        "detected_lang": "es",
+        "expected_lang": "es",
+        "confidence": 0.9855,
+        "reason": "none"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": null,
+        "chrf_score": null
+      }
+    }
+  },
+  {
+    "id": "qc_21_bn_hi",
+    "source": "আপনার সিস্টেম নির্দেশিকা সফলভাবে প্রস্তুত করা হয়েছে।",
+    "target_text": "आपकी सिस्टम निर्देशिका सफलतापूर्वक तैयार की गई है।",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": true,
+        "reason": "none"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": true,
+        "detected_lang": "hi",
+        "expected_lang": "hi",
+        "confidence": 0.9899,
+        "reason": "none"
+      },
+      "back_translation": {
+        "passed": false,
+        "bleu_score": 13.13,
+        "chrf_score": 42.24,
+        "back_translation": "আপনার সিস্টেম ডিরেক্টরি সফলভাবে তৈরি করা হয়েছে.",
+        "engine_used": "nllb"
+      }
+    }
+  },
+  {
+    "id": "qc_24_mr_en",
+    "source": "EduPortal वर तुमचे स्वागत आहे.",
+    "target_text": "Welcome to EduPortal.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": true,
+        "reason": "none"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 1
+      },
+      "language_identification": {
+        "passed": false,
+        "detected_lang": "en",
+        "expected_lang": "en",
+        "confidence": 0.2139,
+        "reason": "low_confidence"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": 32.47,
+        "chrf_score": 62.69,
+        "back_translation": "EduPortal मध्ये आपले स्वागत आहे.",
+        "engine_used": "nllb"
+      }
+    }
+  },
+  {
+    "id": "qc_25_en_mr",
+    "source": "An unknown system error occurred during processing.",
+    "target_text": "An unknown system error occurred during processing.",
+    "qc": {
+      "overall_passed": false,
+      "anomaly_check": {
+        "passed": false,
+        "reason": "untranslated_source_copy"
+      },
+      "dnt_validation": {
+        "valid": true,
+        "missing_entities": [],
+        "status": "verified_final_output"
+      },
+      "entity_preservation": {
+        "passed": true,
+        "score": 1.0,
+        "missing_entities": [],
+        "total_entities": 0
+      },
+      "language_identification": {
+        "passed": false,
+        "detected_lang": "en",
+        "expected_lang": "mr",
+        "confidence": 0.9763,
+        "reason": "language_mismatch"
+      },
+      "back_translation": {
+        "passed": true,
+        "bleu_score": null,
+        "chrf_score": null
+      }
+    }
+  }
+]

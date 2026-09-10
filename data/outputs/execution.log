@@ -1,0 +1,417 @@
+2026-09-07 20:19:31 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-07 20:19:31 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-07 20:19:31 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-07 21:02:50 | INFO | Starting model pre-download process...
+2026-09-07 21:02:50 | INFO | Downloading Hugging Face weights for: facebook/nllb-200-distilled-600M
+2026-09-07 21:07:00 | INFO | Successfully cached facebook/nllb-200-distilled-600M
+2026-09-07 21:07:00 | INFO | Downloading Hugging Face weights for: facebook/m2m100_418M
+2026-09-07 21:14:14 | INFO | Successfully cached facebook/m2m100_418M
+2026-09-07 21:14:14 | INFO | Downloading FastText LID model from https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
+2026-09-07 21:14:16 | INFO | FastText model saved to data\models\lid.176.ftz
+2026-09-07 21:14:16 | INFO | All model artifacts successfully downloaded and cached offline.
+2026-09-07 21:18:34 | INFO | Using default embedded QC test samples.
+2026-09-07 21:18:57 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-07 21:18:57 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-07 21:18:57 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-07 23:36:36 | INFO | Using default embedded QC test samples.
+2026-09-07 23:53:28 | INFO | Using default embedded QC test samples.
+2026-09-07 23:54:45 | INFO | QC completed. Pass rate: 100.0%. Saved to data\outputs\qc_results.json
+2026-09-07 23:56:31 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-07 23:56:31 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-07 23:56:31 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-07 23:57:24 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 12:09:17 | INFO | Using default embedded QC test samples.
+2026-09-08 12:09:26 | INFO | QC completed. Pass rate: 100.0%. Saved to data\outputs\qc_results.json
+2026-09-08 12:10:44 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 12:10:44 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 12:10:44 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 12:11:43 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 12:24:17 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 12:24:17 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 12:24:17 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 12:25:02 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 12:33:12 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 12:39:44 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 12:39:44 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 12:39:44 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 12:40:23 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 12:41:02 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 18:02:11 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 18:02:11 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 18:02:11 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 18:03:46 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 18:05:16 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 19:22:35 | INFO | Starting model pre-download process...
+2026-09-08 19:22:35 | INFO | Downloading Hugging Face weights for: facebook/nllb-200-distilled-600M
+2026-09-08 19:22:51 | INFO | Successfully cached facebook/nllb-200-distilled-600M
+2026-09-08 19:22:51 | INFO | Downloading Hugging Face weights for: facebook/m2m100_418M
+2026-09-08 19:23:04 | INFO | Successfully cached facebook/m2m100_418M
+2026-09-08 19:23:04 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-dra
+2026-09-08 19:23:24 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-dra
+2026-09-08 19:23:24 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-dra-en
+2026-09-08 19:25:00 | INFO | Successfully cached Helsinki-NLP/opus-mt-dra-en
+2026-09-08 19:25:00 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-inc
+2026-09-08 19:25:06 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-inc
+2026-09-08 19:25:06 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-inc-en
+2026-09-08 19:25:12 | INFO | Successfully cached Helsinki-NLP/opus-mt-inc-en
+2026-09-08 19:25:12 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-es
+2026-09-08 19:25:19 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-es
+2026-09-08 19:25:19 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-en
+2026-09-08 19:26:47 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-en
+2026-09-08 19:26:47 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-fr
+2026-09-08 19:26:53 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-fr
+2026-09-08 19:26:53 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-en
+2026-09-08 19:26:58 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-en
+2026-09-08 19:26:58 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-de
+2026-09-08 19:28:19 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-de
+2026-09-08 19:28:19 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-en
+2026-09-08 19:29:49 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-en
+2026-09-08 19:29:49 | INFO | FastText LID model already present at data\models\lid.176.ftz
+2026-09-08 19:29:49 | INFO | All model artifacts successfully downloaded and cached offline.
+2026-09-08 19:31:08 | INFO | Using default embedded QC test samples.
+2026-09-08 19:31:08 | INFO | Initializing BackTranslationValidator for Quality Control...
+2026-09-08 19:31:08 | ERROR | QC Back-translation evaluation failed: BackTranslationValidator.evaluate() got an unexpected keyword argument 'source_lang'
+2026-09-08 19:31:08 | INFO | QC completed. Pass rate: 0.0%. Saved to data\outputs\qc_results.json
+2026-09-08 19:32:32 | INFO | Using default embedded QC test samples.
+2026-09-08 19:32:32 | INFO | Initializing BackTranslationValidator for Quality Control...
+2026-09-08 19:32:54 | INFO | QC completed. Pass rate: 0.0%. Saved to data\outputs\qc_results.json
+2026-09-08 19:34:25 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 19:34:25 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 19:34:25 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 19:34:54 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 19:35:28 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 19:42:31 | INFO | Using default embedded QC test samples.
+2026-09-08 19:42:31 | INFO | Initializing BackTranslationValidator for Quality Control...
+2026-09-08 19:42:31 | INFO | QC completed. Pass rate: 0.0%. Saved to data\outputs\qc_results.json
+2026-09-08 19:42:45 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 19:42:45 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 19:42:45 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 19:43:22 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 19:43:55 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 19:56:35 | INFO | Using default embedded QC test samples.
+2026-09-08 20:02:58 | INFO | Using default embedded QC test samples.
+2026-09-08 20:03:21 | INFO | QC evaluation finished. Pass rate: 0.0%. Output exported to data\outputs\qc_results.json
+2026-09-08 20:03:49 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 20:03:49 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 20:03:49 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 20:04:28 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 20:05:11 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 20:27:53 | INFO | Using default embedded QC test samples.
+2026-09-08 20:27:53 | INFO | QC evaluation finished. Pass rate: 100.0%. Output exported to data\outputs\qc_results.json
+2026-09-08 20:28:11 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 20:28:11 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 20:28:11 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 20:29:01 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 20:29:43 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 22:21:18 | INFO | Using default embedded QC test samples.
+2026-09-08 22:21:18 | INFO | QC evaluation finished. Pass rate: 100.0%. Output exported to data\outputs\qc_results.json
+2026-09-08 22:21:35 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 22:21:35 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 22:21:35 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 22:23:25 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 22:24:44 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 22:44:02 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-08 22:44:02 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-08 22:44:02 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-08 22:45:13 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-08 22:46:06 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-08 22:47:29 | INFO | Using default embedded QC test samples.
+2026-09-08 22:47:30 | INFO | QC evaluation finished. Pass rate: 100.0%. Output exported to data\outputs\qc_results.json
+2026-09-09 00:18:43 | ERROR | API Translation Error: 'TranslationRouter' object has no attribute 'select_engine'
+2026-09-09 19:56:38 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 19:56:38 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 19:56:38 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 19:59:08 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 19:59:57 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:00:38 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:00:38 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:00:38 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:01:14 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:01:48 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:03:19 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:03:19 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:03:19 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:03:54 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:04:29 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:06:44 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:06:44 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:06:44 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:07:20 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:07:54 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:10:12 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:10:12 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:10:12 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:10:47 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:11:22 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:14:36 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:14:36 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:14:36 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:15:12 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:15:46 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:19:26 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:19:26 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:19:26 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:20:03 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:20:39 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 20:21:47 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-09 20:21:47 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-09 20:21:47 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-09 20:22:22 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-09 20:22:56 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-09 22:13:57 | INFO | Starting model pre-download process...
+2026-09-09 22:13:57 | INFO | Downloading Hugging Face weights for: facebook/nllb-200-distilled-600M
+2026-09-09 22:20:11 | INFO | Successfully cached facebook/nllb-200-distilled-600M
+2026-09-09 22:20:11 | INFO | Downloading Hugging Face weights for: facebook/m2m100_418M
+2026-09-09 22:26:59 | INFO | Successfully cached facebook/m2m100_418M
+2026-09-09 22:26:59 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-dra
+2026-09-09 22:30:40 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-dra
+2026-09-09 22:30:40 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-dra-en
+2026-09-09 22:32:09 | INFO | Successfully cached Helsinki-NLP/opus-mt-dra-en
+2026-09-09 22:32:09 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-inc
+2026-09-09 22:33:37 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-inc
+2026-09-09 22:33:37 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-inc-en
+2026-09-09 22:35:04 | INFO | Successfully cached Helsinki-NLP/opus-mt-inc-en
+2026-09-09 22:35:04 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-es
+2026-09-09 22:36:28 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-es
+2026-09-09 22:36:28 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-en
+2026-09-09 22:37:52 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-en
+2026-09-09 22:37:52 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-fr
+2026-09-09 22:39:23 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-fr
+2026-09-09 22:39:23 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-en
+2026-09-09 22:41:00 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-en
+2026-09-09 22:41:00 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-de
+2026-09-09 22:41:53 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-de
+2026-09-09 22:41:53 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-en
+2026-09-09 22:43:24 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-en
+2026-09-09 22:43:24 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-pt
+2026-09-09 22:43:25 | ERROR | Failed to download Helsinki-NLP/opus-mt-en-pt: Helsinki-NLP/opus-mt-en-pt is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:43:25 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-pt-en
+2026-09-09 22:43:26 | ERROR | Failed to download Helsinki-NLP/opus-mt-pt-en: Helsinki-NLP/opus-mt-pt-en is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:43:26 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-id
+2026-09-09 22:44:53 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-id
+2026-09-09 22:44:53 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-id-en
+2026-09-09 22:46:14 | INFO | Successfully cached Helsinki-NLP/opus-mt-id-en
+2026-09-09 22:46:14 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-fr
+2026-09-09 22:47:41 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-fr
+2026-09-09 22:47:41 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-es
+2026-09-09 22:49:22 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-es
+2026-09-09 22:49:22 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-de
+2026-09-09 22:51:18 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-de
+2026-09-09 22:51:18 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-es
+2026-09-09 22:53:29 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-es
+2026-09-09 22:53:29 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-pt
+2026-09-09 22:53:30 | ERROR | Failed to download Helsinki-NLP/opus-mt-es-pt: Helsinki-NLP/opus-mt-es-pt is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:53:30 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-pt-es
+2026-09-09 22:53:31 | ERROR | Failed to download Helsinki-NLP/opus-mt-pt-es: Helsinki-NLP/opus-mt-pt-es is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:53:31 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-de
+2026-09-09 22:55:19 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-de
+2026-09-09 22:55:19 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-fr
+2026-09-09 22:56:57 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-fr
+2026-09-09 22:56:57 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-pt
+2026-09-09 22:56:58 | ERROR | Failed to download Helsinki-NLP/opus-mt-de-pt: Helsinki-NLP/opus-mt-de-pt is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:56:58 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-pt-de
+2026-09-09 22:56:59 | ERROR | Failed to download Helsinki-NLP/opus-mt-pt-de: Helsinki-NLP/opus-mt-pt-de is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `hf auth login` or by passing `token=<your_token>`
+2026-09-09 22:56:59 | INFO | Downloading FastText LID model from https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
+2026-09-09 22:57:01 | INFO | FastText model successfully saved to data\models\lid.176.ftz
+2026-09-09 22:57:01 | INFO | FastText LID model already present at data\models\lid.176.ftz
+2026-09-09 22:57:01 | INFO | All model artifacts successfully downloaded and cached offline.
+2026-09-09 23:26:05 | INFO | Starting model pre-download process...
+2026-09-09 23:26:05 | INFO | Downloading Hugging Face weights for: facebook/nllb-200-distilled-600M
+2026-09-09 23:31:34 | INFO | Successfully cached facebook/nllb-200-distilled-600M
+2026-09-09 23:31:35 | INFO | Downloading Hugging Face weights for: facebook/m2m100_418M
+2026-09-09 23:38:08 | INFO | Successfully cached facebook/m2m100_418M
+2026-09-09 23:38:09 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-dra
+2026-09-09 23:41:34 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-dra
+2026-09-09 23:41:34 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-dra-en
+2026-09-09 23:43:06 | INFO | Successfully cached Helsinki-NLP/opus-mt-dra-en
+2026-09-09 23:43:06 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-inc
+2026-09-09 23:44:35 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-inc
+2026-09-09 23:44:35 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-inc-en
+2026-09-09 23:45:58 | INFO | Successfully cached Helsinki-NLP/opus-mt-inc-en
+2026-09-09 23:45:58 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-es
+2026-09-09 23:47:34 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-es
+2026-09-09 23:47:34 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-en
+2026-09-09 23:49:06 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-en
+2026-09-09 23:49:06 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-fr
+2026-09-09 23:50:25 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-fr
+2026-09-09 23:50:25 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-en
+2026-09-09 23:51:55 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-en
+2026-09-09 23:51:55 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-de
+2026-09-09 23:52:50 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-de
+2026-09-09 23:52:50 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-en
+2026-09-09 23:54:08 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-en
+2026-09-09 23:54:08 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-fr
+2026-09-09 23:55:42 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-fr
+2026-09-09 23:55:42 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-es
+2026-09-09 23:57:10 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-es
+2026-09-09 23:57:10 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-de
+2026-09-10 00:55:56 | ERROR | Failed to download Helsinki-NLP/opus-mt-es-de: Can't load the model for 'Helsinki-NLP/opus-mt-es-de'. If you were trying to load it from 'https://huggingface.co/models', make sure you don't have a local directory with the same name. Otherwise, make sure 'Helsinki-NLP/opus-mt-es-de' is the correct path to a directory containing a file named pytorch_model.bin.
+2026-09-10 00:55:56 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-es
+2026-09-10 00:56:43 | ERROR | Failed to download Helsinki-NLP/opus-mt-de-es: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+2026-09-10 00:56:43 | INFO | Downloading FastText LID model from https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
+2026-09-10 00:56:44 | ERROR | Failed to download FastText model: <urlopen error [Errno 11001] getaddrinfo failed>
+2026-09-10 00:56:44 | INFO | All model artifacts successfully downloaded and cached offline.
+2026-09-10 07:07:17 | INFO | Starting model pre-download process...
+2026-09-10 07:07:17 | INFO | Downloading Hugging Face weights for: facebook/nllb-200-distilled-600M
+2026-09-10 07:12:08 | INFO | Successfully cached facebook/nllb-200-distilled-600M
+2026-09-10 07:12:08 | INFO | Downloading Hugging Face weights for: facebook/m2m100_418M
+2026-09-10 07:22:48 | INFO | Successfully cached facebook/m2m100_418M
+2026-09-10 07:22:48 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-dra
+2026-09-10 07:27:16 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-dra
+2026-09-10 07:27:16 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-dra-en
+2026-09-10 07:29:08 | INFO | Successfully cached Helsinki-NLP/opus-mt-dra-en
+2026-09-10 07:29:08 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-inc
+2026-09-10 07:30:53 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-inc
+2026-09-10 07:30:53 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-inc-en
+2026-09-10 07:32:35 | INFO | Successfully cached Helsinki-NLP/opus-mt-inc-en
+2026-09-10 07:32:35 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-es
+2026-09-10 07:34:31 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-es
+2026-09-10 07:34:31 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-en
+2026-09-10 07:36:16 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-en
+2026-09-10 07:36:16 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-fr
+2026-09-10 07:39:39 | ERROR | Failed to download Helsinki-NLP/opus-mt-en-fr: expected str, bytes or os.PathLike object, not NoneType
+2026-09-10 07:39:39 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-en
+2026-09-10 07:40:50 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-en
+2026-09-10 07:40:50 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-en-de
+2026-09-10 07:41:43 | INFO | Successfully cached Helsinki-NLP/opus-mt-en-de
+2026-09-10 07:41:43 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-en
+2026-09-10 07:43:04 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-en
+2026-09-10 07:43:04 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-fr
+2026-09-10 07:44:29 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-fr
+2026-09-10 07:44:29 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-fr-es
+2026-09-10 07:45:57 | INFO | Successfully cached Helsinki-NLP/opus-mt-fr-es
+2026-09-10 07:45:57 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-es-de
+2026-09-10 07:47:23 | INFO | Successfully cached Helsinki-NLP/opus-mt-es-de
+2026-09-10 07:47:23 | INFO | Downloading Hugging Face weights for: Helsinki-NLP/opus-mt-de-es
+2026-09-10 07:48:50 | INFO | Successfully cached Helsinki-NLP/opus-mt-de-es
+2026-09-10 07:48:50 | INFO | Downloading FastText LID model from https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.ftz
+2026-09-10 07:48:51 | INFO | FastText model successfully saved to data\models\lid.176.ftz
+2026-09-10 07:48:51 | INFO | FastText LID model already present at data\models\lid.176.ftz
+2026-09-10 07:48:51 | INFO | All model artifacts successfully downloaded and cached offline.
+2026-09-10 07:50:50 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-10 07:50:50 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-10 07:50:50 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 07:51:41 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 07:53:45 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 07:58:35 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-10 07:58:35 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-10 07:58:35 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 07:59:28 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 08:00:25 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 08:20:31 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-10 08:20:31 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-10 08:20:31 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 08:20:48 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 08:21:11 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 08:21:50 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 08:21:51 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 08:22:49 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 08:22:53 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 08:37:25 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-10 08:37:25 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-10 08:37:25 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 08:37:37 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 08:37:58 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 08:38:42 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 08:38:42 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 08:39:30 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 08:39:34 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 08:43:19 | INFO | No custom file provided or file not found. Using embedded multi-domain test set.
+2026-09-10 08:43:19 | INFO | Loaded 6 evaluation samples. Starting comparative execution...
+2026-09-10 08:43:19 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 08:43:31 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 08:43:47 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 08:44:14 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 08:44:14 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 08:44:55 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 08:44:59 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 08:50:49 | INFO | Using default embedded QC test samples.
+2026-09-10 08:50:49 | INFO | QC evaluation finished. Pass rate: 100.0%. Output exported to data\outputs\qc_results.json
+2026-09-10 14:47:56 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 14:47:56 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 14:47:56 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 14:48:08 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 14:49:06 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 14:50:21 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 14:50:21 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 14:50:21 | WARNING | Warmup pass skipped for pair (pt->en): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:51:16 | WARNING | Warmup pass skipped for pair (es->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:51:17 | WARNING | Warmup pass skipped for pair (pt->de): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:51:32 | WARNING | Warmup pass skipped for pair (es->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:51:33 | WARNING | Warmup pass skipped for pair (pt->es): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:51:33 | WARNING | Warmup pass skipped for pair (de->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:51:33 | WARNING | Warmup pass skipped for pair (hi->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:51:40 | WARNING | Warmup pass skipped for pair (en->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:51:40 | WARNING | Warmup pass skipped for pair (id->en): Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 14:51:42 | WARNING | Warmup pass skipped for pair (de->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:51:42 | WARNING | Warmup pass skipped for pair (pt->fr): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:51:43 | WARNING | Warmup pass skipped for pair (en->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:52:33 | WARNING | Warmup pass skipped for pair (fr->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:52:33 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 14:52:40 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:52:44 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:52:45 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:52:50 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:52:50 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:52:54 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:52:57 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 14:52:57 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 14:52:57 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:52:58 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:52:58 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:52:59 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 14:53:02 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 14:53:08 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 14:58:43 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 14:58:43 | INFO | QC evaluation finished. Pass rate: 0.0%. Output exported to data\outputs\qc_results.json
+2026-09-10 15:39:08 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 15:40:45 | INFO | QC evaluation finished. Pass rate: 90.0%. Output exported to data\outputs\qc_results.json
+2026-09-10 15:53:09 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 15:53:10 | INFO | QC evaluation finished. Pass rate: 90.0%. Output exported to data\outputs\qc_results.json
+2026-09-10 16:09:57 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 16:09:58 | INFO | QC Evaluation complete. Flagged 20/20 samples. Precision: 0.00, Recall: 0.00, F1: 0.00. Review queue exported to data\outputs\review_queue.json
+2026-09-10 16:18:30 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | ERROR | Back-translation evaluation step failed: TranslationRouter.translate_segment() got an unexpected keyword argument 'engine'
+2026-09-10 16:18:31 | INFO | QC Evaluation complete. Passed: 0/20 (0.0%). Flagged for human review: 20. Exported to data\outputs\review_queue.json
+2026-09-10 16:24:16 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 16:24:16 | INFO | QC Evaluation complete. Passed: 18/20 (90.0%). Flagged for human review: 2. Exported to data\outputs\review_queue.json
+2026-09-10 16:36:31 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 16:36:31 | INFO | QC Evaluation complete. Passed: 18/20 (90.0%). Flagged for human review: 2. Exported to data\outputs\review_queue.json
+2026-09-10 16:55:32 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 16:55:32 | INFO | QC Evaluation complete. Passed: 18/20 (90.0%). Flagged for human review: 2. Exported to data\outputs\review_queue.json
+2026-09-10 17:01:04 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 17:01:04 | INFO | QC Evaluation complete. Passed: 18/20 (90.0%). Flagged for human review: 2. Exported to data\outputs\review_queue.json
+2026-09-10 17:04:49 | INFO | Loaded 20 QC samples from .\data\input_samples\qc.json
+2026-09-10 17:04:49 | INFO | QC Evaluation complete. Passed: 18/20 (90.0%). Flagged for human review: 2. Precision: 1.0, Recall: 0.2222, F1: 0.3636. Exported to data\outputs\review_queue.json
+2026-09-10 19:30:11 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-10 19:30:43 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-10 19:35:52 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-10 19:35:52 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-10 19:36:20 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-10 19:36:20 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json

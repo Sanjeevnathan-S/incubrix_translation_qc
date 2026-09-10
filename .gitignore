@@ -1,0 +1,31 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+
+# Python & Pytest Caches
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Dynamic Caches & Memory
+data/cache/*
+!data/cache/.gitkeep
+
+# Model Directories & Heavy Checkpoints
+data/model/
+data/models/
+models/
+*.bin
+*.safetensors
+*.pt
+*.pth
+*.onnx
+*.h5
+
+# OS & IDE Files
+.DS_Store
+.vscode/
+.idea/

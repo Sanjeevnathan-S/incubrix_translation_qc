@@ -1,0 +1,320 @@
+[
+  {
+    "id": "bench_01_hi_es",
+    "src_lang": "hi",
+    "tgt_lang": "es",
+    "dnt_terms": [
+      "Aadhaar"
+    ],
+    "source": "कृपया सत्यापन के लिए Aadhaar संख्या दर्ज करें।",
+    "ref": "Por favor ingrese el número de Aadhaar para la verificación."
+  },
+  {
+    "id": "bench_02_hi_bn",
+    "src_lang": "hi",
+    "tgt_lang": "bn",
+    "dnt_terms": [],
+    "source": "आज शाम की मीटिंग स्थगित कर दी गई है।",
+    "ref": "আজ সন্ধ্যার মিটিং মুলতবি করা হয়েছে।"
+  },
+  {
+    "id": "bench_03_pt_fr",
+    "src_lang": "pt",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "Enviaremos o comprovativo por e-mail.",
+    "ref": "Nous vous enverrons le reçu par e-mail."
+  },
+  {
+    "id": "bench_04_en_mr",
+    "src_lang": "en",
+    "tgt_lang": "mr",
+    "dnt_terms": [
+      "FlashSale"
+    ],
+    "source": "The FlashSale offer is valid until midnight.",
+    "ref": "FlashSale ऑफर आज मध्यरात्रीपर्यंत वैध आहे।"
+  },
+  {
+    "id": "bench_05_ta_te",
+    "src_lang": "ta",
+    "tgt_lang": "te",
+    "dnt_terms": [],
+    "source": "உங்கள் கணக்கு நிலுவையை சரிபார்க்கவும்.",
+    "ref": "மீ ఖాతా నిల్వను తనిఖీ చేయండి."
+  },
+  {
+    "id": "bench_06_en_te",
+    "src_lang": "en",
+    "tgt_lang": "te",
+    "dnt_terms": [
+      "PaySafe",
+      "OTP"
+    ],
+    "source": "Do not share your PaySafe OTP with anyone.",
+    "ref": "మీ PaySafe OTP ని ఎవరితోనూ పంచుకోకండి."
+  },
+  {
+    "id": "bench_07_es_pt",
+    "src_lang": "es",
+    "tgt_lang": "pt",
+    "dnt_terms": [],
+    "source": "El servicio al cliente está disponible siempre.",
+    "ref": "O serviço ao cliente está sempre disponível."
+  },
+  {
+    "id": "bench_08_es_de",
+    "src_lang": "es",
+    "tgt_lang": "de",
+    "dnt_terms": [],
+    "source": "Su suscripción se renovará el próximo mes.",
+    "ref": "Ihr Abonnement wird im nächsten Monat verlängert."
+  },
+  {
+    "id": "bench_09_en_bn",
+    "src_lang": "en",
+    "tgt_lang": "bn",
+    "dnt_terms": [
+      "SuperSavings"
+    ],
+    "source": "Your SuperSavings account was credited today.",
+    "ref": "আপনার SuperSavings অ্যাকাউন্টে আজ জমা হয়েছে।"
+  },
+  {
+    "id": "bench_10_pt_de",
+    "src_lang": "pt",
+    "tgt_lang": "de",
+    "dnt_terms": [],
+    "source": "A reunião foi agendada para as 14 horas.",
+    "ref": "Das Treffen wurde für 14 Uhr angesetzt."
+  },
+  {
+    "id": "bench_11_hi_mr",
+    "src_lang": "hi",
+    "tgt_lang": "mr",
+    "dnt_terms": [],
+    "source": "भुगतान करने से पहले विवरण की जाँच करें।",
+    "ref": "देयक देण्यापूर्वी तपशीलांची पडताळणी करा."
+  },
+  {
+    "id": "bench_12_de_fr",
+    "src_lang": "de",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "Bitte bestätigen Sie Ihre E-Mail-Adresse.",
+    "ref": "Veuillez confirmer votre adresse e-mail."
+  },
+  {
+    "id": "bench_13_hi_ta",
+    "src_lang": "hi",
+    "tgt_lang": "ta",
+    "dnt_terms": [],
+    "source": "कृपया अपनी यात्रा की पुष्टि करने के लिए क्लिक करें।",
+    "ref": "உங்கள் பயணத்தை உறுதிப்படுத்த கிளிக் செய்யவும்."
+  },
+  {
+    "id": "bench_14_fr_id",
+    "src_lang": "fr",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "Votre commande est en cours de traitement.",
+    "ref": "Pesanan Anda sedang diproses."
+  },
+  {
+    "id": "bench_15_pt_es",
+    "src_lang": "pt",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "Confirme a sua morada de entrega.",
+    "ref": "Confirme su dirección de entrega."
+  },
+  {
+    "id": "bench_16_en_ta",
+    "src_lang": "en",
+    "tgt_lang": "ta",
+    "dnt_terms": [
+      "IST",
+      "SecurityAlert"
+    ],
+    "source": "Please update your password before 10:00 AM IST. #SecurityAlert",
+    "ref": "காலை 10:00 AM IST மணிக்குள் உங்கள் கடவுச்சொல்லைப் புதுப்பிக்கவும். #SecurityAlert"
+  },
+  {
+    "id": "bench_17_hi_fr",
+    "src_lang": "hi",
+    "tgt_lang": "fr",
+    "dnt_terms": [
+      "UPI ID"
+    ],
+    "source": "भुगतान निष्पादन के लिए UPI ID दर्ज करें।",
+    "ref": "Entrez l'UPI ID pour l'exécution du paiement."
+  },
+  {
+    "id": "bench_18_es_id",
+    "src_lang": "es",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "Gracias por utilizar nuestro servicio.",
+    "ref": "Terima kasih telah menggunakan layanan kami."
+  },
+  {
+    "id": "bench_19_bn_es",
+    "src_lang": "bn",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "নতুন আপডেটের জন্য ওয়েবসাইট দেখুন।",
+    "ref": "Visite el sitio web para ver las actualizaciones."
+  },
+  {
+    "id": "bench_20_id_en",
+    "src_lang": "id",
+    "tgt_lang": "en",
+    "dnt_terms": [
+      "GoPay"
+    ],
+    "source": "Saldo GoPay Anda tidak mencukupi hari ini.",
+    "ref": "Your GoPay balance is insufficient today."
+  },
+  {
+    "id": "bench_21_pt_en",
+    "src_lang": "pt",
+    "tgt_lang": "en",
+    "dnt_terms": [
+      "PixPay"
+    ],
+    "source": "O seu pagamento via PixPay foi processado.",
+    "ref": "Your payment via PixPay has been processed."
+  },
+  {
+    "id": "bench_22_de_id",
+    "src_lang": "de",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "Willkommen auf unserer offiziellen Website.",
+    "ref": "Selamat datang di situs web resmi kami."
+  },
+  {
+    "id": "bench_23_en_de",
+    "src_lang": "en",
+    "tgt_lang": "de",
+    "dnt_terms": [
+      "Error 404"
+    ],
+    "source": "If you see Error 404, refresh the webpage.",
+    "ref": "Wenn Sie Error 404 sehen, aktualisieren Sie die Webseite."
+  },
+  {
+    "id": "bench_24_hi_id",
+    "src_lang": "hi",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "आपकी सहायता करने में हमें खुशी होगी।",
+    "ref": "Kami akan senang membantu Anda."
+  },
+  {
+    "id": "bench_25_en_fr",
+    "src_lang": "en",
+    "tgt_lang": "fr",
+    "dnt_terms": [
+      "CloudShield VPN"
+    ],
+    "source": "Connect through CloudShield VPN to access servers.",
+    "ref": "Connectez-vous via le CloudShield VPN pour accéder aux serveurs."
+  },
+  {
+    "id": "bench_26_en_pt",
+    "src_lang": "en",
+    "tgt_lang": "pt",
+    "dnt_terms": [
+      "MultiFactorAuth"
+    ],
+    "source": "Enable MultiFactorAuth for higher security.",
+    "ref": "Ative o MultiFactorAuth para maior segurança."
+  },
+  {
+    "id": "bench_27_en_es",
+    "src_lang": "en",
+    "tgt_lang": "es",
+    "dnt_terms": [
+      "TechCorp"
+    ],
+    "source": "Get exclusive discounts on all TechCorp hardware.",
+    "ref": "Obtenga descuentos exclusivos en todo el hardware de TechCorp."
+  },
+  {
+    "id": "bench_28_en_id",
+    "src_lang": "en",
+    "tgt_lang": "id",
+    "dnt_terms": [
+      "JNE Express"
+    ],
+    "source": "Package delivered by JNE Express tomorrow.",
+    "ref": "Paket dikirim oleh JNE Express besok."
+  },
+  {
+    "id": "bench_29_fr_de",
+    "src_lang": "fr",
+    "tgt_lang": "de",
+    "dnt_terms": [],
+    "source": "Le rapport annuel est disponible en ligne.",
+    "ref": "Der Jahresbericht ist online verfügbar."
+  },
+  {
+    "id": "bench_30_fr_es",
+    "src_lang": "fr",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "Merci de nous avoir contactés aujourd'hui.",
+    "ref": "Gracias por contactarnos hoy."
+  },
+  {
+    "id": "bench_31_hi_te",
+    "src_lang": "hi",
+    "tgt_lang": "te",
+    "dnt_terms": [],
+    "source": "आपका नया बैंक खाता सक्रिय हो गया है।",
+    "ref": "మీ కొత్త బ్యాంక్ ఖాతా సక్రియం చేయబడింది."
+  },
+  {
+    "id": "bench_32_en_hi",
+    "src_lang": "en",
+    "tgt_lang": "hi",
+    "dnt_terms": [
+      "IncuBrix Express"
+    ],
+    "source": "Your order #89201 has been dispatched via IncuBrix Express.",
+    "ref": "आपका ऑर्डर #89201 IncuBrix Express के माध्यम से भेज दिया गया है।"
+  },
+  {
+    "id": "bench_33_es_fr",
+    "src_lang": "es",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "Por favor verifique los detalles de su cuenta.",
+    "ref": "Veuillez vérifier les détails de votre compte."
+  },
+  {
+    "id": "bench_34_ta_fr",
+    "src_lang": "ta",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "உங்கள் முன்பதிவு வெற்றிகரமாக முடிந்தது.",
+    "ref": "Votre réservation a été effectuée avec succès."
+  },
+  {
+    "id": "bench_35_hi_de",
+    "src_lang": "hi",
+    "tgt_lang": "de",
+    "dnt_terms": [],
+    "source": "नियम और शर्तों को ध्यान से पढ़ें।",
+    "ref": "Lesen Sie die Geschäftsbedingungen sorgfältig durch."
+  },
+  {
+    "id": "bench_36_de_pt",
+    "src_lang": "de",
+    "tgt_lang": "pt",
+    "dnt_terms": [],
+    "source": "Ihre Bestellung wurde versandt.",
+    "ref": "A sua encomenda foi enviada."
+  }
+]

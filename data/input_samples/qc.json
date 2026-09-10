@@ -1,0 +1,247 @@
+[
+  {
+    "id": "qc_01_hi_te",
+    "src_lang": "hi",
+    "tgt_lang": "te",
+    "dnt_terms": [],
+    "source": "सुरक्षा कारणों से अपना विवरण किसी के साथ साझा न करें।",
+    "ref": "భద్రతా కారణాల వల్ల మీ వివరాలను ఎవరితోనూ పంచుకోకండి.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_02_en_hi",
+    "src_lang": "en",
+    "tgt_lang": "hi",
+    "dnt_terms": [],
+    "source": "We are processing your request. Please wait a moment.",
+    "ref": "हम आपके अनुरोध पर कार्रवाई कर रहे हैं। कृपया कुछ समय प्रतीक्षा करें।",
+    "is_fault": false
+  },
+  {
+    "id": "qc_03_en_pt",
+    "src_lang": "en",
+    "tgt_lang": "pt",
+    "dnt_terms": [],
+    "source": "Click here to download your monthly report.",
+    "ref": "Clique aqui para baixar baixar baixar baixar baixar baixar relatório.",
+    "is_fault": true
+  },
+  {
+    "id": "qc_04_en_es",
+    "src_lang": "en",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "Welcome to our customer portal. Please sign in to continue.",
+    "ref": "Bienvenido a nuestro portal de clientes. Inicie sesión para continuar.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_05_ta_fr",
+    "src_lang": "ta",
+    "tgt_lang": "fr",
+    "dnt_terms": [
+      "PassExpress"
+    ],
+    "source": "PassExpress வழியாக உங்கள் டிக்கெட்டைப் பெறுங்கள்.",
+    "ref": "Obtenez votre billet via PassExpress.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_06_en_fr",
+    "src_lang": "en",
+    "tgt_lang": "fr",
+    "dnt_terms": [
+      "OAuth2"
+    ],
+    "source": "Authentication failed because the OAuth2 token expired.",
+    "ref": "L'authentification a échoué car le jeton OAuth2 a expiré.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_07_es_de",
+    "src_lang": "es",
+    "tgt_lang": "de",
+    "dnt_terms": [
+      "EuroPay"
+    ],
+    "source": "Realice la transferencia utilizando EuroPay únicamente.",
+    "ref": "Führen Sie die Überweisung nur mit EuroPay durch.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_08_hi_ta",
+    "src_lang": "hi",
+    "tgt_lang": "ta",
+    "dnt_terms": [],
+    "source": "आपका खाता सुरक्षित है और उपयोग के लिए तैयार है।",
+    "ref": "உங்கள் கணக்கு பாதுகாப்பாக உள்ளது மற்றும் பயன்படுத்தத் தயாராக உள்ளது.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_09_de_id",
+    "src_lang": "de",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "Ihre Einstellungen wurden erfolgreich gespeichert.",
+    "ref": "Your settings have been saved successfully.",
+    "is_fault": true
+  },
+  {
+    "id": "qc_10_en_fr",
+    "src_lang": "en",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "Please complete your user profile before submitting.",
+    "ref": "",
+    "is_fault": true
+  },
+  {
+    "id": "qc_11_es_fr",
+    "src_lang": "es",
+    "tgt_lang": "fr",
+    "dnt_terms": [],
+    "source": "El documento adjunto contiene todos los datos solicitados.",
+    "ref": "Le document ci-joint contient toutes les données demandées.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_12_hi_es",
+    "src_lang": "hi",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "सफलतापूर्वक लॉगिन करने के लिए धन्यवाद।",
+    "ref": "Gracias por iniciar sesión con éxito éxito éxito éxito éxito.",
+    "is_fault": true
+  },
+  {
+    "id": "qc_13_en_id",
+    "src_lang": "en",
+    "tgt_lang": "id",
+    "dnt_terms": [],
+    "source": "Please check your email to verify your registration.",
+    "ref": "Silakan periksa email Anda untuk memverifikasi pendaftaran Anda.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_14_pt_en",
+    "src_lang": "pt",
+    "tgt_lang": "en",
+    "dnt_terms": [
+      "Bradesco"
+    ],
+    "source": "A sua conta no Bradesco está atualizada.",
+    "ref": "Your account at Bradesco is up to date.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_15_en_hi",
+    "src_lang": "en",
+    "tgt_lang": "hi",
+    "dnt_terms": [
+      "Paytm"
+    ],
+    "source": "Please pay using Paytm to receive cashback.",
+    "ref": "कैशबैक प्राप्त करने के लिए कृपया Paytm का उपयोग करके भुगतान करें।",
+    "is_fault": false
+  },
+  {
+    "id": "qc_16_en_es",
+    "src_lang": "en",
+    "tgt_lang": "es",
+    "dnt_terms": [
+      "UltraDrive"
+    ],
+    "source": "Save all your project files directly to UltraDrive.",
+    "ref": "Guarde todos sus archivos de proyecto directamente en UltraDrive.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_17_fr_es",
+    "src_lang": "fr",
+    "tgt_lang": "es",
+    "dnt_terms": [],
+    "source": "Nous avons bien reçu votre demande de remboursement.",
+    "ref": "Hemos recibido su solicitud de reembolso.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_18_id_en",
+    "src_lang": "id",
+    "tgt_lang": "en",
+    "dnt_terms": [
+      "Tokopedia"
+    ],
+    "source": "Pesanan Anda di Tokopedia telah dikirim.",
+    "ref": "Your order on Tokopedia has been shipped.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_19_es_id",
+    "src_lang": "es",
+    "tgt_lang": "id",
+    "dnt_terms": [
+      "FastPay"
+    ],
+    "source": "Gunakan FastPay para completar la transacción rápidamente.",
+    "ref": "Gunakan FastPay untuk menyelesaikan transaksi dengan cepat.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_20_en_de",
+    "src_lang": "en",
+    "tgt_lang": "de",
+    "dnt_terms": [],
+    "source": "Your subscription will automatically renew at the end of the year.",
+    "ref": "Ihr Abonnement wird am Ende des Jahres automatisch verlängert.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_21_bn_hi",
+    "src_lang": "bn",
+    "tgt_lang": "hi",
+    "dnt_terms": [],
+    "source": "আপনার সিস্টেম নির্দেশিকা সফলভাবে প্রস্তুত করা হয়েছে।",
+    "ref": "आपकी सिस्टम निर्देशिका सफलतापूर्वक तैयार की गई है।",
+    "is_fault": false
+  },
+  {
+    "id": "qc_22_en_ta",
+    "src_lang": "en",
+    "tgt_lang": "ta",
+    "dnt_terms": [
+      "IncuBrix"
+    ],
+    "source": "Welcome to the IncuBrix portal.",
+    "ref": "IncuBrix போர்ட்டலுக்கு வரவேற்கிறோம்.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_23_te_en",
+    "src_lang": "te",
+    "tgt_lang": "en",
+    "dnt_terms": [],
+    "source": "మీరు పాస్‌వర్డ్‌ను విజయవంతంగా మార్చారు.",
+    "ref": "You have successfully changed your password.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_24_mr_en",
+    "src_lang": "mr",
+    "tgt_lang": "en",
+    "dnt_terms": [
+      "EduPortal"
+    ],
+    "source": "EduPortal वर तुमचे स्वागत आहे.",
+    "ref": "Welcome to EduPortal.",
+    "is_fault": false
+  },
+  {
+    "id": "qc_25_en_mr",
+    "src_lang": "en",
+    "tgt_lang": "mr",
+    "dnt_terms": [],
+    "source": "An unknown system error occurred during processing.",
+    "ref": "An unknown system error occurred during processing.",
+    "is_fault": true
+  }
+]

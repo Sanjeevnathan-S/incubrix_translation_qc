@@ -1,0 +1,64 @@
+default_engine: "nllb"
+fallback_engine: "marian"
+
+engines:
+  marian:
+    description: "Ultra-fast bilingual models (~300M parameters) for English and European pairs"
+  nllb:
+    model: "facebook/nllb-200-distilled-600M"
+    description: "Universal translation model (~600M parameters) covering Indic, European, and 200+ languages"
+
+routes:
+  # ==========================================
+  # 1. BASELINE: English to Target Languages
+  # ==========================================
+  en-hi: { primary: "nllb", fallback: "marian" }
+  en-ta: { primary: "nllb", fallback: "marian" }
+  en-te: { primary: "nllb", fallback: "marian" }
+  en-bn: { primary: "nllb", fallback: "marian" }
+  en-mr: { primary: "nllb", fallback: "marian" }
+
+  en-es: { primary: "marian", fallback: "nllb" }
+  en-fr: { primary: "marian", fallback: "nllb" }
+  en-de: { primary: "marian", fallback: "nllb" }
+  en-pt: { primary: "nllb", fallback: null }  # Direct NLLB route (no standalone Marian repo)
+  en-id: { primary: "nllb", fallback: null }  # Direct NLLB route (no standalone Marian repo)
+
+  # ==========================================
+  # 2. STRONG TIER: Non-English Directions
+  # ==========================================
+  # Indic -> Indic (Handled directly by NLLB)
+  hi-ta: { primary: "nllb", fallback: null }
+  hi-te: { primary: "nllb", fallback: null }
+  hi-bn: { primary: "nllb", fallback: null }
+  hi-mr: { primary: "nllb", fallback: null }
+  ta-te: { primary: "nllb", fallback: null }
+
+  # European -> European
+  es-fr: { primary: "marian", fallback: "nllb" }
+  es-de: { primary: "marian", fallback: "nllb" }
+  es-pt: { primary: "nllb", fallback: null }  # Direct NLLB route
+  fr-es: { primary: "marian", fallback: "nllb" }
+  fr-de: { primary: "nllb", fallback: null }  # Direct NLLB route
+  de-fr: { primary: "nllb", fallback: null }  # Direct NLLB route
+  de-pt: { primary: "nllb", fallback: null }  # Direct NLLB route
+
+  # Portuguese & Indonesian directions -> Handled directly by NLLB
+  pt-en: { primary: "nllb", fallback: null }
+  pt-es: { primary: "nllb", fallback: null }
+  pt-de: { primary: "nllb", fallback: null }
+  pt-fr: { primary: "nllb", fallback: null }
+  id-en: { primary: "nllb", fallback: null }
+
+  # Indic -> European (Handled directly by NLLB)
+  hi-es: { primary: "nllb", fallback: null }
+  hi-fr: { primary: "nllb", fallback: null }
+  hi-de: { primary: "nllb", fallback: null }
+  ta-fr: { primary: "nllb", fallback: null }
+  bn-es: { primary: "nllb", fallback: null }
+
+  # Cross-regional -> Indonesian (Handled directly by NLLB)
+  es-id: { primary: "nllb", fallback: null }
+  fr-id: { primary: "nllb", fallback: null }
+  de-id: { primary: "nllb", fallback: null }
+  hi-id: { primary: "nllb", fallback: null }
