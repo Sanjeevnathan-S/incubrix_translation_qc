@@ -1,4 +1,4 @@
-# Disclosure of AI Tool Usage (`AI_USE.md`)
+# Disclosure of AI Tool Usage
 
  This document discloses the specific tools and scope of AI assistance utilized during the development of the `incubrix_translation_qc` project.
 
