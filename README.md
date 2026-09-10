@@ -1,7 +1,3 @@
-Here is the content **unchanged**, ready to copy-paste directly into a `.md` file:
-
- Track 04: Multilingual Translation with Independent Quality Control
-
 # Track 04: Multilingual Translation with Independent Quality Control
 
  A Python translation pipeline built with NLLB and MarianMT models, featuring entity preservation for Do-Not-Translate (DNT) terms, persistent response caching, and automated Quality Control (QC) checks.
@@ -12,7 +8,7 @@ Here is the content **unchanged**, ready to copy-paste directly into a `.md` fil
 
 ```
 # Clone the repository
-git clone https://github.com/your-username/incubrix_translation_qc.git
+git clone https://github.com/Sanjeevnathan-S/incubrix_translation_qc.git
 cd incubrix_translation_qc
 
 # Create and activate virtual environment
