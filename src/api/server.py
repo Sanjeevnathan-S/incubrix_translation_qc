@@ -1,6 +1,6 @@
 import time
 from typing import List
-from fastapi import FastAPI, HTTPException, status
+from fastapi import FastAPI, HTTPException, Body, status
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.api.schemas import (
@@ -28,7 +28,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Initialize global translation pipeline state
 pipeline = TranslationPipeline(
     config_path="config/routing_table.yaml",
     cache_dir="data/cache",
@@ -42,11 +41,48 @@ def health_check():
 
 
 @app.post("/v1/translate", response_model=TranslationResponse, status_code=status.HTTP_200_OK)
-def translate_single(request: TranslationRequest):
+def translate_single(
+    request: TranslationRequest = Body(
+        ...,
+        openapi_examples={
+            "qc_15_en_hi": {
+                "summary": "English to Hindi (Paytm DNT)",
+                "description": "Passed QC test case with brand term preservation.",
+                "value": {
+                    "text": "Please pay using Paytm to receive cashback.",
+                    "src_lang": "en",
+                    "tgt_lang": "hi",
+                    "dnt_terms": ["Paytm"],
+                    "use_cache": True
+                }
+            },
+            "qc_05_ta_fr": {
+                "summary": "Tamil to French (PassExpress DNT)",
+                "description": "Passed QC test case for non-English source with DNT term.",
+                "value": {
+                    "text": "PassExpress வழியாக உங்கள் டிக்கெட்டைப் பெறுங்கள்.",
+                    "src_lang": "ta",
+                    "tgt_lang": "fr",
+                    "dnt_terms": ["PassExpress"],
+                    "use_cache": True
+                }
+            },
+            "qc_04_en_es": {
+                "summary": "English to Spanish Standard",
+                "description": "Passed QC test case without explicit DNT terms.",
+                "value": {
+                    "text": "Welcome to our customer portal. Please sign in to continue.",
+                    "src_lang": "en",
+                    "tgt_lang": "es",
+                    "dnt_terms": [],
+                    "use_cache": True
+                }
+            }
+        }
+    )
+):
     """
-    Translates a single text segment.
-    Handles entity detection, engine-aware masking ([1] vs __DNT_001__),
-    dynamic routing (Marian vs NLLB), translation, unmasking, and QC.
+    Translates a single text segment with automated DNT preservation and QC.
     """
     start_time = time.perf_counter()
     try:
@@ -60,6 +96,7 @@ def translate_single(request: TranslationRequest):
         elapsed_ms = round((time.perf_counter() - start_time) * 1000, 2)
 
         return TranslationResponse(
+            id=res.get("id"),
             source_text=res["source_text"],
             translated_text=res["translated_text"],
             engine_used=res["engine_used"],
@@ -76,7 +113,49 @@ def translate_single(request: TranslationRequest):
 
 
 @app.post("/v1/translate/batch", response_model=BatchTranslationResponse, status_code=status.HTTP_200_OK)
-def translate_batch(request: BatchTranslationRequest):
+def translate_batch(
+    request: BatchTranslationRequest = Body(
+        ...,
+        openapi_examples={
+            "passing_batch_suite": {
+                "summary": "Validated Passing QC Batch",
+                "description": "Batch payload combining multiple verified test cases across language pairs.",
+                "value": {
+                    "segments": [
+                        {
+                            "text": "We are processing your request. Please wait a moment.",
+                            "src_lang": "en",
+                            "tgt_lang": "hi",
+                            "dnt_terms": [],
+                            "use_cache": True
+                        },
+                        {
+                            "text": "Save all your project files directly to UltraDrive.",
+                            "src_lang": "en",
+                            "tgt_lang": "es",
+                            "dnt_terms": ["UltraDrive"],
+                            "use_cache": True
+                        },
+                        {
+                            "text": "Pesanan Anda di Tokopedia telah dikirim.",
+                            "src_lang": "id",
+                            "tgt_lang": "en",
+                            "dnt_terms": ["Tokopedia"],
+                            "use_cache": True
+                        },
+                        {
+                            "text": "Welcome to the IncuBrix portal.",
+                            "src_lang": "en",
+                            "tgt_lang": "ta",
+                            "dnt_terms": ["IncuBrix"],
+                            "use_cache": True
+                        }
+                    ]
+                }
+            }
+        }
+    )
+):
     """
     Processes a batch of translation segments sequentially.
     """
@@ -97,6 +176,7 @@ def translate_batch(request: BatchTranslationRequest):
 
             results.append(
                 TranslationResponse(
+                    id=res.get("id"),
                     source_text=res["source_text"],
                     translated_text=res["translated_text"],
                     engine_used=res["engine_used"],
@@ -109,6 +189,7 @@ def translate_batch(request: BatchTranslationRequest):
             logger.error(f"Batch Item Error: {str(e)}")
             results.append(
                 TranslationResponse(
+                    id=None,
                     source_text=item.text,
                     translated_text=item.text,
                     engine_used="fallback",
