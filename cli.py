@@ -48,10 +48,11 @@ def run_batch(
 @cli.command("benchmark")
 def benchmark_cmd(
     input_file: Optional[str] = typer.Option(None, "--input", "-i", help="Custom JSON/JSONL benchmark dataset path"),
-    output_file: str = typer.Option("data/outputs/benchmark_results.json", "--output", "-o", help="Output results path")
+    output_file: str = typer.Option("data/outputs/benchmark_results.json", "--output", "-o", help="Output results path"),
+    demo: bool = typer.Option(False, "--demo", help="Enable demo mode execution logging")
 ):
     """Runs comparative benchmarking across Model Family 1 and Model Family 2."""
-    run_benchmark(input_path=input_file, output_path=output_file)
+    run_benchmark(input_path=input_file, output_path=output_file, demo=demo)
 
 
 @cli.command("qc")

@@ -1,5 +1,6 @@
 import sys
 import os
+import psutil
 from loguru import logger
 
 def setup_logger(log_file: str = "data/outputs/execution.log"):
@@ -23,32 +24,15 @@ def setup_logger(log_file: str = "data/outputs/execution.log"):
     return logger
 
 def get_peak_memory_mb() -> float:
-    """Returns peak resident set memory usage in MB across Windows, Linux, and macOS."""
+    """
+    Returns peak CPU RAM usage in MB across Windows, Linux, and macOS.
+    """
     if sys.platform == "win32":
-        import ctypes
-        class PROCESS_MEMORY_COUNTERS(ctypes.Structure):
-            _fields_ = [
-                ('cb', ctypes.c_ulong),
-                ('PageFaultCount', ctypes.c_ulong),
-                ('PeakWorkingSetSize', ctypes.c_size_t),
-                ('WorkingSetSize', ctypes.c_size_t),
-                ('QuotaPeakPagedPoolUsage', ctypes.c_size_t),
-                ('QuotaPagedPoolUsage', ctypes.c_size_t),
-                ('QuotaPeakNonPagedPoolUsage', ctypes.c_size_t),
-                ('QuotaNonPagedPoolUsage', ctypes.c_size_t),
-                ('PagefileUsage', ctypes.c_size_t),
-                ('PeakPagefileUsage', ctypes.c_size_t),
-            ]
-        counters = PROCESS_MEMORY_COUNTERS()
-        ctypes.windll.psapi.GetProcessMemoryInfo(
-            ctypes.windll.kernel32.GetCurrentProcess(),
-            ctypes.byref(counters),
-            ctypes.sizeof(counters)
-        )
-        return round(counters.PeakWorkingSetSize / (1024 * 1024), 2)
-    else:
-        import resource
-        usage = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-        if sys.platform == "darwin":
-            return round(usage / (1024 * 1024), 2)
-        return round(usage / 1024, 2)
+        # Returns peak working set memory on Windows
+        return round(psutil.Process(os.getpid()).memory_info().peak_wset / (1024 * 1024), 2)
+    
+    import resource
+    maxrss = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
+    # macOS returns bytes, Linux returns kilobytes
+    scale = (1024 * 1024) if sys.platform == "darwin" else 1024
+    return round(maxrss / scale, 2)

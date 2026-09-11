@@ -415,3 +415,374 @@ Check your internet connection or see how to run the library in offline mode at 
 2026-09-10 19:35:52 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
 2026-09-10 19:36:20 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
 2026-09-10 19:36:20 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-10 23:04:47 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 23:04:47 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 23:04:47 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 23:05:41 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 23:05:41 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 23:05:41 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 23:05:53 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 23:07:12 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 23:08:42 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 23:08:42 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 23:08:52 | WARNING | Warmup pass skipped for pair (es->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:09:22 | WARNING | Warmup pass skipped for pair (de->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:10:16 | WARNING | Warmup pass skipped for pair (es->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:10:16 | WARNING | Warmup pass skipped for pair (pt->fr): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:10:16 | WARNING | Warmup pass skipped for pair (pt->en): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:10:17 | WARNING | Warmup pass skipped for pair (hi->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:10:17 | WARNING | Warmup pass skipped for pair (de->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:11:04 | WARNING | Warmup pass skipped for pair (pt->de): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:11:04 | WARNING | Warmup pass skipped for pair (en->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:11:16 | WARNING | Warmup pass skipped for pair (id->en): Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 23:11:43 | WARNING | Warmup pass skipped for pair (en->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:11:50 | WARNING | Warmup pass skipped for pair (fr->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:11:50 | WARNING | Warmup pass skipped for pair (pt->es): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:11:52 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 23:11:54 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:12:01 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:12:02 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:12:05 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:12:05 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:12:07 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:12:08 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 23:12:08 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:12:08 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:12:09 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:12:10 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:12:13 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:13:02 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:14:52 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 23:24:25 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 23:24:25 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 23:24:25 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 23:24:39 | INFO | Starting benchmark loop for Model_Family_1_NLLB (36 samples)...
+2026-09-10 23:31:16 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 23:31:16 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 23:31:16 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 23:31:27 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 23:32:35 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 23:34:00 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 23:34:00 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 23:34:08 | WARNING | Warmup pass skipped for pair (fr->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:34:14 | WARNING | Warmup pass skipped for pair (es->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:34:34 | WARNING | Warmup pass skipped for pair (de->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:34:48 | WARNING | Warmup pass skipped for pair (pt->de): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:34:48 | WARNING | Warmup pass skipped for pair (en->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:34:48 | WARNING | Warmup pass skipped for pair (es->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:35:05 | WARNING | Warmup pass skipped for pair (pt->fr): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:35:24 | WARNING | Warmup pass skipped for pair (hi->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:35:25 | WARNING | Warmup pass skipped for pair (pt->en): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:35:36 | WARNING | Warmup pass skipped for pair (pt->es): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:35:36 | WARNING | Warmup pass skipped for pair (de->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:35:37 | WARNING | Warmup pass skipped for pair (id->en): Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 23:35:48 | WARNING | Warmup pass skipped for pair (en->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:35:50 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-10 23:35:52 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:35:55 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:35:56 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:35:58 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:35:58 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:36:01 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:36:01 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-10 23:36:01 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-10 23:36:01 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:36:02 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:36:03 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:36:04 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:36:08 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-10 23:36:11 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-10 23:40:51 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-10 23:40:51 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-10 23:48:58 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-10 23:48:58 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-10 23:48:58 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-10 23:49:13 | INFO | Warming up engine model checkpoints for Model_Family_1_NLLB...
+2026-09-10 23:50:40 | INFO | Warm-up complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-10 23:56:43 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-10 23:56:44 | INFO | Warming up engine model checkpoints for Model_Family_2_Marian...
+2026-09-10 23:58:25 | WARNING | Warmup pass skipped for pair (fr->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-10 23:58:47 | WARNING | Warmup pass skipped for pair (pt->es): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:00:36 | WARNING | Warmup pass skipped for pair (es->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:03:14 | WARNING | Warmup pass skipped for pair (es->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:03:14 | WARNING | Warmup pass skipped for pair (en->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:03:15 | WARNING | Warmup pass skipped for pair (pt->de): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:03:16 | WARNING | Warmup pass skipped for pair (de->pt): Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:03:16 | WARNING | Warmup pass skipped for pair (pt->fr): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:04:19 | WARNING | Warmup pass skipped for pair (en->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:04:23 | WARNING | Warmup pass skipped for pair (de->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:04:23 | WARNING | Warmup pass skipped for pair (pt->en): Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:04:23 | WARNING | Warmup pass skipped for pair (hi->id): Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:04:23 | WARNING | Warmup pass skipped for pair (id->en): Language pair (id, en) is not supported by MarianEngine.
+2026-09-11 00:04:42 | INFO | Warm-up complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-11 00:04:46 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:04:51 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:05:24 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:05:27 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:05:27 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:05:30 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:05:31 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-11 00:05:31 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:05:31 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:05:32 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:05:32 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:05:33 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:06:37 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:07:39 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 00:19:26 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 00:19:26 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-11 00:19:26 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 00:19:50 | INFO | Running 1-sample PyTorch memory warmup for Model_Family_1_NLLB...
+2026-09-11 00:20:04 | INFO | Warmup complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-11 00:26:24 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 00:26:25 | INFO | Running 1-sample PyTorch memory warmup for Model_Family_2_Marian...
+2026-09-11 00:27:01 | INFO | Warmup complete for Model_Family_2_Marian. Starting benchmark timing loop...
+2026-09-11 00:27:08 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:27:28 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 00:27:39 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:33:59 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:33:59 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 00:35:05 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 00:42:16 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 00:42:16 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-11 00:42:16 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 00:42:32 | INFO | Running 1-sample PyTorch memory warmup for Model_Family_1_NLLB...
+2026-09-11 00:42:50 | INFO | Warmup complete for Model_Family_1_NLLB. Starting benchmark timing loop...
+2026-09-11 02:15:31 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 02:15:31 | INFO | Loaded 36 evaluation samples. Starting comparative execution...
+2026-09-11 02:15:31 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 02:15:44 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 02:19:15 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 02:19:15 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 02:19:44 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:20:10 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:20:22 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:20:59 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:20:59 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:21:03 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:21:46 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-11 02:21:46 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:21:46 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:21:59 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:22:00 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:22:04 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:24:25 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:25:25 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 02:32:41 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 02:32:41 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 02:32:41 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 02:32:55 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 02:34:15 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 02:34:15 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 02:34:49 | ERROR | Inference failed for sample 'bench_22_de_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:34:49 | ERROR | Inference failed for sample 'bench_36_de_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:35:05 | ERROR | Inference failed for sample 'bench_28_en_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:35:06 | ERROR | Inference failed for sample 'bench_26_en_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:35:39 | ERROR | Inference failed for sample 'bench_18_es_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:35:39 | ERROR | Inference failed for sample 'bench_07_es_pt' on engine Model_Family_2_Marian: Language pair (en, pt) is not supported by MarianEngine.
+2026-09-11 02:35:55 | ERROR | Inference failed for sample 'bench_14_fr_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:35:58 | ERROR | Inference failed for sample 'bench_24_hi_id' on engine Model_Family_2_Marian: Language pair (en, id) is not supported by MarianEngine.
+2026-09-11 02:35:59 | ERROR | Inference failed for sample 'bench_20_id_en' on engine Model_Family_2_Marian: Language pair (id, en) is not supported by MarianEngine.
+2026-09-11 02:35:59 | ERROR | Inference failed for sample 'bench_10_pt_de' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:35:59 | ERROR | Inference failed for sample 'bench_21_pt_en' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:35:59 | ERROR | Inference failed for sample 'bench_15_pt_es' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:35:59 | ERROR | Inference failed for sample 'bench_03_pt_fr' on engine Model_Family_2_Marian: Language pair (pt, en) is not supported by MarianEngine.
+2026-09-11 02:36:13 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 02:51:56 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 02:51:56 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 02:51:56 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 02:52:12 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 02:54:57 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 02:54:57 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 02:54:57 | WARNING | Skipping sample bench_19_bn_es (bn->es): Unsupported by Model_Family_2_Marian
+2026-09-11 02:54:57 | WARNING | Skipping sample bench_12_de_fr (de->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 02:54:57 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 02:54:57 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 02:55:41 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 02:55:42 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:11 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:11 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:11 | WARNING | Skipping sample bench_29_fr_de (fr->de): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_02_hi_bn (hi->bn): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_35_hi_de (hi->de): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_01_hi_es (hi->es): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_17_hi_fr (hi->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_11_hi_mr (hi->mr): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_13_hi_ta (hi->ta): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_31_hi_te (hi->te): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_34_ta_fr (ta->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | WARNING | Skipping sample bench_05_ta_te (ta->te): Unsupported by Model_Family_2_Marian
+2026-09-11 02:56:20 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 03:04:20 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 03:04:20 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 03:04:20 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 03:04:36 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 03:05:53 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 03:05:53 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 03:05:53 | WARNING | Skipping sample bench_19_bn_es (bn->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:05:53 | WARNING | Skipping sample bench_12_de_fr (de->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:05:53 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:05:53 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:25 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:26 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:50 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:50 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:50 | WARNING | Skipping sample bench_29_fr_de (fr->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_02_hi_bn (hi->bn): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_35_hi_de (hi->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_01_hi_es (hi->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_17_hi_fr (hi->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_11_hi_mr (hi->mr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_13_hi_ta (hi->ta): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_31_hi_te (hi->te): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_34_ta_fr (ta->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | WARNING | Skipping sample bench_05_ta_te (ta->te): Unsupported by Model_Family_2_Marian
+2026-09-11 03:06:58 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 03:10:41 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 03:10:41 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 03:10:41 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 03:10:58 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 03:12:19 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 03:12:19 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 03:12:19 | WARNING | Skipping sample bench_19_bn_es (bn->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:12:19 | WARNING | Skipping sample bench_12_de_fr (de->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:12:19 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:12:19 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:00 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:01 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:32 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:32 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:32 | WARNING | Skipping sample bench_29_fr_de (fr->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_02_hi_bn (hi->bn): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_35_hi_de (hi->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_01_hi_es (hi->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_17_hi_fr (hi->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_11_hi_mr (hi->mr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_13_hi_ta (hi->ta): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_31_hi_te (hi->te): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_34_ta_fr (ta->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:41 | WARNING | Skipping sample bench_05_ta_te (ta->te): Unsupported by Model_Family_2_Marian
+2026-09-11 03:13:42 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 03:24:16 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 03:24:16 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 03:24:16 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 03:24:35 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 03:29:26 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 03:29:26 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 03:30:06 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:30:06 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:30:23 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:30:24 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:31:09 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:31:09 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 03:31:30 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:32:57 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:00 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:00 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:00 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:00 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:00 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 03:33:44 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 07:09:40 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 07:09:40 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 07:09:40 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 07:09:58 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 07:16:17 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 07:16:17 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 07:16:43 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:16:43 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:16:55 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:16:56 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:17:18 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:17:18 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:17:34 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:17 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:36 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:36 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:36 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:36 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 07:20:36 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 07:21:16 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 07:30:38 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 07:30:38 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 07:30:38 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 07:30:50 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 07:32:05 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 07:32:05 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 07:32:26 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:32:26 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:32:50 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:32:50 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:33:07 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:33:07 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:33:22 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:33:58 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:25 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:25 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:25 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:25 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:25 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 07:34:44 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 07:43:23 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 07:43:23 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 07:43:23 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 07:43:35 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 07:44:50 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 07:44:50 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 07:45:11 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:45:11 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:45:35 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:45:36 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:45:53 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:45:53 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:10 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:41 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:57 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:57 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:57 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:57 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 07:46:57 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 07:47:11 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 07:56:20 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 07:56:20 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 07:56:20 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 07:56:33 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 07:57:52 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 07:57:52 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 07:58:13 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:58:13 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:58:39 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:58:39 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:58:57 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:58:57 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:13 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:45 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:59 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:59 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:59 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:59 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 07:59:59 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 08:00:14 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
+2026-09-11 08:43:31 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-11 08:43:31 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json

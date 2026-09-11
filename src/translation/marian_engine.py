@@ -1,4 +1,6 @@
 import os
+import gc
+import re
 from typing import List, Dict, Any, Tuple, Optional
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
@@ -8,9 +10,10 @@ from src.translation.base import BaseTranslationEngine
 class MarianEngine(BaseTranslationEngine):
     """
     Secondary Multilingual Translation Engine using MarianMT / OPUS-MT Architecture.
-    Cleaned of token mutation logic, non-existent Portuguese/Indonesian standalone repos, 
-    and unsupported French-German pairs.
+    Handles direct pairs and automatic English pivoting for non-English directions.
     """
+
+    MAX_CACHED_MODELS: int = 3  # Keeps up to 3 Marian models (~900MB total) in RAM
 
     LANG_MAP: Dict[str, str] = {
         "eng_latn": "en", "hin_deva": "hi", "tam_taml": "ta", "tam_tamx": "ta",
@@ -55,8 +58,9 @@ class MarianEngine(BaseTranslationEngine):
 
     def __init__(self):
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        if self.device == "cpu":
-            torch.set_num_threads(4)
+        
+        if self.device == "cpu" and torch.get_num_threads() > 2:
+            torch.set_num_threads(2)
 
         self.cache_dir = "data/models/huggingface"
         os.makedirs(self.cache_dir, exist_ok=True)
@@ -68,6 +72,16 @@ class MarianEngine(BaseTranslationEngine):
         code = lang_code.lower().strip()
         return self.LANG_MAP.get(code, code)
 
+    def supports_pair(self, src_lang: str, tgt_lang: str) -> bool:
+        src_code = self._get_lang_code(src_lang)
+        tgt_code = self._get_lang_code(tgt_lang)
+        
+        if src_code == tgt_code:
+            return True
+        if (src_code, tgt_code) in self.PAIR_CONFIG:
+            return True
+        return (src_code, "en") in self.PAIR_CONFIG and ("en", tgt_code) in self.PAIR_CONFIG
+
     def _get_pair_info(self, src_code: str, tgt_code: str) -> Tuple[str, Optional[str]]:
         pair = (src_code, tgt_code)
         if pair in self.PAIR_CONFIG:
@@ -76,6 +90,15 @@ class MarianEngine(BaseTranslationEngine):
 
     def _load_model_and_tokenizer(self, repo_name: str, prefix: Optional[str]) -> Tuple[Any, Any, Optional[str]]:
         if repo_name not in self._models:
+            # LRU Eviction: purge oldest model ONLY when cache limit is exceeded
+            if len(self._models) >= self.MAX_CACHED_MODELS:
+                oldest_repo = next(iter(self._models))
+                del self._models[oldest_repo]
+                del self._tokenizers[oldest_repo]
+                gc.collect()
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+
             try:
                 tokenizer = AutoTokenizer.from_pretrained(repo_name, cache_dir=self.cache_dir)
                 model = AutoModelForSeq2SeqLM.from_pretrained(repo_name, cache_dir=self.cache_dir)
@@ -95,7 +118,7 @@ class MarianEngine(BaseTranslationEngine):
     def _execute_translation(self, texts: List[str], repo_name: str, prefix: Optional[str]) -> List[str]:
         model, tokenizer, prefix_tag = self._load_model_and_tokenizer(repo_name, prefix)
 
-        prepared_texts = [f"{prefix_tag} {t}" for t in texts] if prefix_tag else texts
+        prepared_texts = [f"{prefix_tag}{t}" for t in texts] if prefix_tag else texts
 
         encoded = tokenizer(
             prepared_texts,
@@ -106,17 +129,24 @@ class MarianEngine(BaseTranslationEngine):
         )
         encoded = {k: v.to(self.device) for k, v in encoded.items()}
 
-        # Replace torch.no_grad() with torch.inference_mode() for lower C++ overhead
         with torch.inference_mode():
             generated_tokens = model.generate(
                 **encoded,
-                max_new_tokens=128,  # Use max_new_tokens instead of max_length
+                pad_token_id=tokenizer.pad_token_id,
+                max_new_tokens=128,
+                min_new_tokens=1,
                 num_beams=1,
-                use_cache=True,      # Ensure KV cache is explicitly reused across steps
-                no_repeat_ngram_size=3
+                use_cache=True
             )
 
-        return tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+        raw_outputs = tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
+
+        cleaned_outputs = []
+        for text in raw_outputs:
+            cleaned = re.sub(r'<\s*dnt\s*_\s*(\d+)\s*>', r'<dnt_\1>', text, flags=re.IGNORECASE)
+            cleaned_outputs.append(cleaned)
+
+        return cleaned_outputs
 
     def translate(self, text: str, src_lang: str, tgt_lang: str) -> str:
         if not text.strip():

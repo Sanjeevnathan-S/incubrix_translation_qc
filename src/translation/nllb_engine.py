@@ -35,8 +35,10 @@ class NLLBEngine(BaseTranslationEngine):
     def __init__(self, model_name: str = "facebook/nllb-200-distilled-600M"):
         self.model_name = model_name
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
-        if self.device == "cpu":
-            torch.set_num_threads(4)
+        
+        # Respect global thread capping set by host benchmark process
+        if self.device == "cpu" and torch.get_num_threads() > 2:
+            torch.set_num_threads(2)
 
         cache_dir = "data/models/huggingface"
         os.makedirs(cache_dir, exist_ok=True)
@@ -88,8 +90,11 @@ class NLLBEngine(BaseTranslationEngine):
             generated_tokens = self.model.generate(
                 **encoded,
                 forced_bos_token_id=tgt_lang_id,
-                max_length=256,
+                pad_token_id=self.tokenizer.pad_token_id,
+                max_new_tokens=128,
+                min_new_tokens=3,
                 num_beams=1,
+                use_cache=True
             )
 
         return self.tokenizer.batch_decode(generated_tokens, skip_special_tokens=True)
