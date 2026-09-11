@@ -3,6 +3,7 @@ from typing import List
 from fastapi import FastAPI, HTTPException, Body, status
 from fastapi.middleware.cors import CORSMiddleware
 
+
 from src.api.schemas import (
     TranslationRequest,
     TranslationResponse,
@@ -17,7 +18,7 @@ logger = setup_logger()
 app = FastAPI(
     title="Multilingual Translation API",
     version="1.0.0",
-    description="Track 04 Pipeline with Multi-tier Automated Quality Control"
+    description="Track 04 Pipeline with Multi-tier Automated Quality Control & DNT Term Preservation"
 )
 
 app.add_middleware(
@@ -46,8 +47,8 @@ def translate_single(
         ...,
         openapi_examples={
             "qc_15_en_hi": {
-                "summary": "English to Hindi (Paytm DNT)",
-                "description": "Passed QC test case with brand term preservation.",
+                "summary": "qc_15_en_hi (Paytm DNT - Passed)",
+                "description": "Verified passing test case from dataset. DNT term: Paytm.",
                 "value": {
                     "text": "Please pay using Paytm to receive cashback.",
                     "src_lang": "en",
@@ -56,9 +57,20 @@ def translate_single(
                     "use_cache": True
                 }
             },
+            "qc_16_en_es": {
+                "summary": "qc_16_en_es (UltraDrive DNT - Passed)",
+                "description": "Verified passing test case from dataset. DNT term: UltraDrive.",
+                "value": {
+                    "text": "Save all your project files directly to UltraDrive.",
+                    "src_lang": "en",
+                    "tgt_lang": "es",
+                    "dnt_terms": ["UltraDrive"],
+                    "use_cache": True
+                }
+            },
             "qc_05_ta_fr": {
-                "summary": "Tamil to French (PassExpress DNT)",
-                "description": "Passed QC test case for non-English source with DNT term.",
+                "summary": "qc_05_ta_fr (PassExpress DNT - Passed)",
+                "description": "Verified passing test case from dataset. DNT term: PassExpress.",
                 "value": {
                     "text": "PassExpress வழியாக உங்கள் டிக்கெட்டைப் பெறுங்கள்.",
                     "src_lang": "ta",
@@ -67,14 +79,14 @@ def translate_single(
                     "use_cache": True
                 }
             },
-            "qc_04_en_es": {
-                "summary": "English to Spanish Standard",
-                "description": "Passed QC test case without explicit DNT terms.",
+            "qc_22_en_ta": {
+                "summary": "qc_22_en_ta (IncuBrix DNT - Passed)",
+                "description": "Verified passing test case from dataset. DNT term: IncuBrix.",
                 "value": {
-                    "text": "Welcome to our customer portal. Please sign in to continue.",
+                    "text": "Welcome to the IncuBrix portal.",
                     "src_lang": "en",
-                    "tgt_lang": "es",
-                    "dnt_terms": [],
+                    "tgt_lang": "ta",
+                    "dnt_terms": ["IncuBrix"],
                     "use_cache": True
                 }
             }
@@ -82,7 +94,7 @@ def translate_single(
     )
 ):
     """
-    Translates a single text segment with automated DNT preservation and QC.
+    Translates a single text segment while ensuring DNT term preservation.
     """
     start_time = time.perf_counter()
     try:
@@ -117,16 +129,16 @@ def translate_batch(
     request: BatchTranslationRequest = Body(
         ...,
         openapi_examples={
-            "passing_batch_suite": {
-                "summary": "Validated Passing QC Batch",
-                "description": "Batch payload combining multiple verified test cases across language pairs.",
+            "dnt_passed_dataset_suite": {
+                "summary": "Verified DNT Passed Suite",
+                "description": "Batch request composed exclusively of verified passing DNT samples (qc_15, qc_16, qc_18, qc_22).",
                 "value": {
                     "segments": [
                         {
-                            "text": "We are processing your request. Please wait a moment.",
+                            "text": "Please pay using Paytm to receive cashback.",
                             "src_lang": "en",
                             "tgt_lang": "hi",
-                            "dnt_terms": [],
+                            "dnt_terms": ["Paytm"],
                             "use_cache": True
                         },
                         {
@@ -157,7 +169,7 @@ def translate_batch(
     )
 ):
     """
-    Processes a batch of translation segments sequentially.
+    Processes a batch of translation segments with verified DNT preservation.
     """
     start_time = time.perf_counter()
     results: List[TranslationResponse] = []
@@ -186,17 +198,10 @@ def translate_batch(
                 )
             )
         except Exception as e:
-            logger.error(f"Batch Item Error: {str(e)}")
-            results.append(
-                TranslationResponse(
-                    id=None,
-                    source_text=item.text,
-                    translated_text=item.text,
-                    engine_used="fallback",
-                    is_cached=False,
-                    latency_ms=0.0,
-                    qc_metrics={"overall_passed": False, "error": str(e)}
-                )
+            logger.error(f"Batch Item Processing Exception: {str(e)}", exc_info=True)
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail=f"Batch item translation failed: {str(e)}"
             )
 
     total_latency_ms = round((time.perf_counter() - start_time) * 1000, 2)
@@ -206,3 +211,4 @@ def translate_batch(
         total_latency_ms=total_latency_ms,
         results=results
     )
+

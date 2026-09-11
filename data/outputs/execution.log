@@ -786,3 +786,25 @@ Check your internet connection or see how to run the library in offline mode at 
 2026-09-11 08:00:14 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json
 2026-09-11 08:43:31 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
 2026-09-11 08:43:31 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-11 12:21:51 | INFO | Loaded 25 QC samples from .\data\input_samples\qc.json
+2026-09-11 12:23:14 | INFO | QC Evaluation complete. Passed: 17/25 (68.0%). Flagged for human review: 8. Precision: 0.625, Recall: 1.0, F1: 0.7692. Exported to data\outputs\review_queue.json
+2026-09-11 12:26:15 | INFO | Loading custom benchmark dataset from: .\data\input_samples\benchmark.json
+2026-09-11 12:26:17 | INFO | Loaded and grouped 36 evaluation samples by language direction. Starting comparative execution...
+2026-09-11 12:26:17 | INFO | Testing Model Family 1: NLLB-200...
+2026-09-11 12:26:23 | INFO | Starting benchmark evaluation loop for Model_Family_1_NLLB...
+2026-09-11 12:27:31 | INFO | Testing Model Family 2: M2M-100 / Marian...
+2026-09-11 12:27:31 | INFO | Starting benchmark evaluation loop for Model_Family_2_Marian...
+2026-09-11 12:28:01 | WARNING | Skipping sample bench_22_de_id (de->id): Unsupported by Model_Family_2_Marian
+2026-09-11 12:28:01 | WARNING | Skipping sample bench_36_de_pt (de->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 12:28:27 | WARNING | Skipping sample bench_28_en_id (en->id): Unsupported by Model_Family_2_Marian
+2026-09-11 12:28:27 | WARNING | Skipping sample bench_26_en_pt (en->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 12:28:48 | WARNING | Skipping sample bench_18_es_id (es->id): Unsupported by Model_Family_2_Marian
+2026-09-11 12:28:48 | WARNING | Skipping sample bench_07_es_pt (es->pt): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:05 | WARNING | Skipping sample bench_14_fr_id (fr->id): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:36 | WARNING | Skipping sample bench_24_hi_id (hi->id): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:53 | WARNING | Skipping sample bench_20_id_en (id->en): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:53 | WARNING | Skipping sample bench_10_pt_de (pt->de): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:53 | WARNING | Skipping sample bench_21_pt_en (pt->en): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:53 | WARNING | Skipping sample bench_15_pt_es (pt->es): Unsupported by Model_Family_2_Marian
+2026-09-11 12:29:53 | WARNING | Skipping sample bench_03_pt_fr (pt->fr): Unsupported by Model_Family_2_Marian
+2026-09-11 12:30:16 | INFO | Saved full benchmark report to: data\outputs\benchmark_results.json

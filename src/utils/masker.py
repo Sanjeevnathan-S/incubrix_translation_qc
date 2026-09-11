@@ -10,31 +10,23 @@ class TextMasker:
     """
 
     PATTERNS = [
-        # 1. Template Placeholders
         ("TEMPLATE", r'\{\{[^{}]+\}\}|\{[^{}]+\}|%[sdifxX]|\$\{.*?\}'),
-        
-        # 2. URLs & URIs (excludes trailing sentence punctuation)
         ("URL", r'https?://[^\s<>"{}|\^~\[\]`]+[^\s<>"{}|\^~\[\]`.,!?:;]'),
-        
-        # 3. Email Addresses
         ("EMAIL", r'\b[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}\b'),
-        
-        # 4. UUIDs and Hashes
         ("UUID", r'\b[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}\b'),
         ("HASH", r'\b[0-9a-fA-F]{32,64}\b'),
-        
-        # 5. Usernames / Handles (@user)
         ("MENTION", r'@[A-Za-z0-9_]+'),
-        
-        # 6. Hashtags (supports Unicode and Indic scripts)
         ("HASHTAG", r'#[A-Za-z0-9_\u00C0-\u024F\u0900-\u0D7F]+'),
-        
-        # 7. Currency, Timestamps, Numbers, Units
         ("CURRENCY_UNIT_NUM", 
          r'(?:[\$\€\£\₹\¥]\s*\d+(?:[\.,]\d+)*|\b\d+(?:[\.,:\/-]\d+)*(?:\s*(?:USD|EUR|INR|GBP|kg|g|km|m|cm|mm|am|pm|AM|PM|hrs|mins|secs|%))?)')
     ]
 
     PLACEHOLDER_REPAIR_REGEX = re.compile(r'_+\s*dnt\s*_+\s*(\d+)\s*_+', re.IGNORECASE)
+    PLACEHOLDER_FIND_REGEX = re.compile(r'__DNT_\d+__')
+
+    @classmethod
+    def _format_placeholder(cls, counter: int) -> str:
+        return f"__DNT_{counter:03d}__"
 
     @classmethod
     def _normalize_placeholders(cls, text: str) -> str:
@@ -83,7 +75,8 @@ class TextMasker:
 
         for start, end, original_val in spans:
             masked_chunks.append(text[last_idx:start])
-            placeholder = f"__DNT_{counter:03d}__"
+            # DYNAMIC CALL: Uses engine-specific placeholder format
+            placeholder = cls._format_placeholder(counter)
             mapping[placeholder] = original_val
             masked_chunks.append(f" {placeholder} ")
             last_idx = end
@@ -113,8 +106,9 @@ class TextMasker:
 
         normalized_text = cls._normalize_placeholders(translated_masked_text)
         expected_placeholders = set(mapping.keys())
-        found_placeholders = re.findall(r'__DNT_\d+__', normalized_text)
-        
+        # DYNAMIC CALL: Uses engine-specific regex
+        found_placeholders = cls.PLACEHOLDER_FIND_REGEX.findall(normalized_text)
+
         counts: Dict[str, int] = {}
         for ph in found_placeholders:
             counts[ph] = counts.get(ph, 0) + 1
@@ -147,10 +141,9 @@ class TextMasker:
         unmasked = re.sub(r'\s+([.,!?:;])', r'\1', unmasked)
         return re.sub(r'[ \t]+', ' ', unmasked).strip()
 
+
 class MarianTextMasker(TextMasker):
-    """
-    Version 8: Angle Brackets <DNT001>, <DNT002>
-    """
+    """Version 8: Angle Brackets <DNT001>, <DNT002>"""
     PLACEHOLDER_REPAIR_REGEX = re.compile(r'<\s*DNT\s*(\d+)\s*>', re.IGNORECASE)
     PLACEHOLDER_FIND_REGEX = re.compile(r'<DNT\d{3}>')
 
@@ -169,6 +162,7 @@ class MarianTextMasker(TextMasker):
 
         repaired = cls.PLACEHOLDER_REPAIR_REGEX.sub(_repair_match, text)
         return re.sub(r'[ \t]+', ' ', repaired).strip()
+
 
 def get_masker(engine_name: Optional[str] = None) -> Type[TextMasker]:
     """Dynamically resolves the engine-appropriate masker class."""
