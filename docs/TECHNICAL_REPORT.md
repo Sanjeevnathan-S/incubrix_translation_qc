@@ -47,23 +47,23 @@
 
  ## 2\. Benchmark Evaluation & Engine Trade-Offs
 
- Quantitative benchmarks were captured across 36 evaluation samples on an Intel CPU runtime environment. Memory peak high-water mark across full model execution was recorded at 2905.69 MB RSS.
+ Quantitative benchmarks were captured across 36 evaluation samples on an Intel CPU runtime environment. Memory peak high-water mark across full model execution was recorded at 2906.18 MB RSS.
 
  | Metric | Model Family 1 (NLLB-200) | Model Family 2 (Marian) | Unit / Scale |
 | --- | --- | --- | --- |
 | **Evaluated Samples** | **36** | **23** _(13 skipped - unsupported pairs)_ | Count |
-| **BLEU Score** | **53.34** | 34.72 | SacreBLEU scale \[0–100\] |
-| **chrF Score** | **75.34** | 56.00 | Character F-score \[0–100\] |
-| **DNT Pass Rate** | **88.9%** | **69.6%** | Percentage intact |
-| **Avg Latency** | **2148.89** | **4243.56** | ms / segment |
-| **Throughput** | **3.01** | **1.51** | tokens / sec |
-| **Peak RAM** | 2905.69 | 2905.69 | Megabytes (RSS) |
+| **BLEU Score** | **53.34** | **40.73** | SacreBLEU scale \[0–100\] |
+| **chrF Score** | **75.34** | **64.15** | Character F-score \[0–100\] |
+| **DNT Pass Rate** | **88.9%** | **87.0%** | Percentage intact |
+| **Avg Latency** | **1868.02** | **5015.87** | ms / segment |
+| **Throughput** | **3.46** | **1.34** | tokens / sec |
+| **Peak RAM** | 2906.18 | 2906.18 | Megabytes (RSS) |
 | **Asset footprint** | \~2460.00 | \~300.00 | Megabytes per model instance |
 
  ### Performance & Quality Analysis
 
- - **NLLB-200**: Serves as the high-accuracy primary engine. Achieving a BLEU score of **53.34** and a chrF score of **75.34**, it maintains semantic fidelity across low-resource language pairs. Throughput averages **3.01 tokens/sec** with a single model binary in memory.
-- **Marian**: Operates as a lightweight alternative (\~300 MB asset size). While memory-efficient during load time, total execution latency increases to **4243.56 ms/segment** on un-cached multi-step pivot routes (`L_src → en → L_tgt`) due to sequential model loading overhead and dual-pass inference.
+ - **NLLB-200**: Serves as the high-accuracy primary engine. Achieving a BLEU score of **53.34** and a chrF score of **75.34**, it maintains semantic fidelity across low-resource language pairs. Throughput averages **3.46 tokens/sec** with a single model binary in memory.
+- **Marian**: Operates as a lightweight alternative (\~300 MB asset size). While memory-efficient during load time, total execution latency increases to **5015.87 ms/segment** on un-cached multi-step pivot routes (`L_src → en → L_tgt`) due to sequential model loading overhead and dual-pass inference.
 
 ---
 
@@ -72,7 +72,7 @@
  The system incorporates a rule-based post-translation evaluation module (`cli.py qc`) designed to intercept translation failures, placeholder corruption, and numerical discrepancies before output generation.
 
 ```
-                          QC Evaluation Pipeline
+                        QC Evaluation Pipeline
 
    Input JSON (25 samples) ──► Rules Engine ──┬──► Passed (17 / 68.0%)
                                               │
@@ -98,18 +98,18 @@
  ## 4\. Failure Analysis & Mitigations
 
 ```
-                              System Bottlenecks & Fixes
+                            System Bottlenecks & Fixes
 
-   Failure Point                 Root Cause                            Engineering Mitigation
- ┌────────────────────────┐    ┌──────────────────────────┐          ┌───────────────────────────┐
- │ Thread Lockup & Freeze │ ──►│ Uncapped PyTorch CPU     │ ─────────►│ Capped to 2 threads       │
- │ (BENCH-00)             │    │ worker pool (8 threads)  │          │ (torch.set_num_threads)   │
- └────────────────────────┘    └──────────────────────────┘          └───────────────────────────┘
+   Failure Point                 Root Cause                          Engineering Mitigation
+┌────────────────────────┐    ┌──────────────────────────┐         ┌───────────────────────────┐
+│ Thread Lockup & Freeze │ ──►│ Uncapped PyTorch CPU     │ ───────►│ Capped to 2 threads       │
+│ (BENCH-00)             │    │ worker pool (8 threads)  │         │ (torch.set_num_threads)   │
+└────────────────────────┘    └──────────────────────────┘         └───────────────────────────┘
 
- ┌────────────────────────┐    ┌──────────────────────────┐          ┌───────────────────────────┐
- │ DNT Mask Corruption    │ ──►│ Subword tokenizers       │ ─────────►│ Regex post-processing     │
- │ (DNT Preservation)     │    │ splitting <dnt_0> tags   │          │ & pattern restoration     │
- └────────────────────────┘    └──────────────────────────┘          └───────────────────────────┘
+┌────────────────────────┐    ┌──────────────────────────┐         ┌───────────────────────────┐
+│ DNT Mask Corruption    │ ──►│ Subword tokenizers       │ ───────►│ Regex post-processing     │
+│ (DNT Preservation)     │    │ splitting <dnt_0> tags   │         │ & pattern restoration     │
+└────────────────────────┘    └──────────────────────────┘         └───────────────────────────┘
 ```
 
  ### Identified Failures & Resolutions
@@ -148,9 +148,9 @@
  ## 6\. Product Roadmap & Future Improvements
 
 ```
-                              Product Roadmap
+                            Product Roadmap
 
-  Phase 1 (Current)          Phase 2 (Near-Term)          Phase 3 (Production)
+ Phase 1 (Current)          Phase 2 (Near-Term)          Phase 3 (Production)
 ┌──────────────────┐       ┌────────────────────┐       ┌──────────────────────┐
 │ • PyTorch CPU    │ ────► │ • ONNX Runtime     │ ────► │ • Async Queue        │
 │ • 2-Thread Cap   │       │ • INT8 Quantization│       │ • Fine-tuned LLM QC  │
